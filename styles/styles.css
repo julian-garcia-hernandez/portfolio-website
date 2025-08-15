@@ -1,0 +1,281 @@
+@font-face {
+  font-family: "Chomsky";
+  src: url("../fonts/Chomsky.woff2") format("woff2"),
+    url("../fonts/Chomsky.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Newsreader";
+  src: url("../fonts/Newsreader.woff2") format("woff2"),
+    url("../fonts/Newsreader.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Libre-Franklin";
+  src: url("../fonts/Libre-Franklin.ttf") format("truetype");
+  font-weight: normal bold border;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GloucesterMTPro-BoldExtCond";
+  src: url("../fonts/GloucesterMTPro-BoldExtCond.woff2") format("woff2"),
+    url("../fonts/GloucesterMTPro-BoldExtCond.woff") format("woff");
+  font-style: normal italic;
+  font-weight: normal lighter;
+}
+
+@font-face {
+  font-family: "News-Gothic-No2-W02-Blk";
+  src: url("../fonts/News-Gothic-No2-W02-Blk.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal bold;
+}
+
+@font-face {
+  font-family: "Cheltenham";
+  src: url("../fonts/CheltenhamBT-BoldItalic.woff2") format("woff2"),
+    url("../fonts/CheltenhamBT-BoldItalic.woff") format("woff");
+  font-weight: normal bold;
+  font-style: normal italic;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 4rem 8rem 4rem 8rem;
+  font-family: Newsreader;
+}
+
+main {
+  display: flex;
+  margin-top: 1.5rem;
+}
+
+section p {
+  margin: 0;
+}
+
+p {
+  margin-top: 0;
+  text-align: justify;
+}
+
+input,
+textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 40rem;
+}
+
+button {
+  width: 100%;
+  font-family: "Newsreader";
+  border-width: 1px;
+  border-radius: 0;
+  line-height: 1.5rem;
+}
+
+article:nth-of-type(1), /*jobs*/
+article:nth-of-type(3), /*skills*/
+article:nth-of-type(4), /*professional statement*/
+article:nth-of-type(5) {
+  /**/
+  flex: 1;
+}
+
+article:nth-of-type(2) {
+  flex: 3;
+}
+
+article:nth-of-type(2) .horizontal-line {
+  margin: 1rem 23rem 1rem 23rem;
+}
+
+.vertical-line {
+  border-left: 1px solid rgb(131, 131, 131);
+  margin-top: 0.41rem;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+.horizontal-line {
+  border-top: 1px solid rgb(0, 0, 0);
+  margin: 1rem 3rem 1rem 3rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  display: inline;
+  font-family: "Chomsky";
+  font-size: 8.25rem;
+  font-weight: lighter;
+  line-height: 7rem;
+  margin: 0;
+  text-align: center;
+}
+
+h2 {
+  margin: 0;
+}
+
+h3 {
+  text-align: center;
+  font-family: "GloucesterMTPro-BoldExtCond";
+  font-weight: lighter;
+  font-size: 1.75rem;
+  line-height: 1.5rem;
+  margin: 0 0 0 0;
+}
+
+h4 {
+  font-family: "Newsreader";
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+h5 {
+  text-align: center;
+  margin: 0 0 0.25rem 0;
+}
+
+article:nth-of-type(4) figure {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  align-items: center;
+}
+
+article:nth-of-type(4) figure figcaption {
+  margin-top: .5rem;
+}
+
+figure {
+  margin: 0;
+}
+
+figure img {
+  width: 200px;
+  object-fit: cover;
+}
+
+figcaption {
+  text-align: center;
+}
+
+article:nth-of-type(2) h2 {
+  text-align: center;
+}
+
+.edition-and-forecast {
+  display: inline-flex;
+  flex-direction: column;
+  width: 213px;
+  height: fit-content;
+}
+
+.motto {
+  border: solid 1px black;
+  font-size: 1.1rem;
+  padding: 1.25rem;
+  width: 12rem;
+  text-align: center;
+}
+
+.website-metadata {
+  display: flex;
+  font-family: "Newsreader";
+  font-weight: lighter;
+  font-size: 1.1rem;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+  margin-top: 0.75rem;
+}
+
+.website-metadata span:nth-child(2) {
+  margin: 0 14.5rem 0 9rem;
+  font-size: 0.75rem;
+  margin-top: 0.25rem;
+  font-weight: lighter;
+}
+
+.website-metadata time {
+  margin: 0 42.5rem 0 0.5rem;
+}
+
+.edition {
+  font-family: "Libre-Franklin";
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0;
+  text-align: center;
+}
+
+.forecast {
+  font-size: 0.8rem;
+  text-align: justify;
+  margin: 0;
+}
+.forecast-time {
+  font-weight: bold;
+}
+
+.jobs-header,
+.projects-header,
+.contact-header {
+  font-family: "GloucesterMTPro-BoldExtCond";
+  font-weight: lighter;
+  font-size: 2.75rem;
+  line-height: 1.08;
+}
+
+.skills-header {
+  font-family: "News-Gothic-No2-W02-Blk";
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-top: 1rem;
+}
+
+.skills-image {
+  object-fit: cover;
+  height: 23rem;
+  width: 47rem;
+}
+
+.skills {
+  border: 1px black solid;
+  padding: 1rem;
+}
+
+.skills :nth-child(4) {
+  margin-bottom: 0rem;
+}
+
+.professional-statement-header {
+  font-family: "Cheltenham";
+  font-size: 2rem;
+  line-height: 2.25rem;
+}
