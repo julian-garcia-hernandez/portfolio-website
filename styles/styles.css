@@ -47,6 +47,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -65,8 +66,35 @@ main {
   margin-top: 1.5rem;
 }
 
+form {
+  height: 24.74rem;
+  margin-left: 0.5rem;
+}
+
+article:nth-of-type(4) section p {
+  height: 17.8rem;
+}
+
+article:nth-of-type(3) section p,
+article:nth-of-type(1) section p {
+  height: 30.3rem;
+}
+
+article:nth-of-type(4) section p,
+article:nth-of-type(3) section p {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+article:nth-of-type(1) section p {
+  padding-right: 0.5rem;
+}
+
 section p {
   margin: 0;
+  height: 30rem;
+  scrollbar-width: none;
+  overflow-y: scroll;
 }
 
 p {
@@ -80,7 +108,18 @@ textarea {
 }
 
 textarea {
-  height: 40rem;
+  height: 100%;
+}
+
+article:nth-of-type(3) section .button-container {
+  padding: 0 0.5rem 0 0.5rem;
+}
+
+.button-container {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 0.5rem 0 0;
+  margin-top: 0.5rem;
 }
 
 button {
@@ -104,14 +143,12 @@ article:nth-of-type(2) {
 }
 
 article:nth-of-type(2) .horizontal-line {
-  margin: 1rem 23rem 1rem 23rem;
+  margin: 0 19.5rem 0 19.5rem;
 }
 
 .vertical-line {
   border-left: 1px solid rgb(131, 131, 131);
   margin-top: 0.41rem;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
 }
 
 .horizontal-line {
@@ -168,7 +205,7 @@ article:nth-of-type(4) figure {
 }
 
 article:nth-of-type(4) figure figcaption {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
 }
 
 figure {
@@ -180,6 +217,9 @@ figure img {
   object-fit: cover;
 }
 
+article:nth-of-type(2) figure figcaption {
+  margin: 0.19rem 0 1rem 0;
+}
 figcaption {
   text-align: center;
 }
@@ -252,6 +292,13 @@ article:nth-of-type(2) h2 {
   line-height: 1.08;
 }
 
+.projects-header {
+  padding-left: 0.5rem;
+}
+
+.contact-header {
+  margin-left: 0.4rem;
+}
 .skills-header {
   font-family: "News-Gothic-No2-W02-Blk";
   font-size: 1.5rem;
@@ -261,13 +308,16 @@ article:nth-of-type(2) h2 {
 
 .skills-image {
   object-fit: cover;
-  height: 23rem;
+  height: 24.8rem;
   width: 47rem;
 }
 
 .skills {
   border: 1px black solid;
-  padding: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 1.5rem;
+  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
 
 .skills :nth-child(4) {
@@ -276,6 +326,9 @@ article:nth-of-type(2) h2 {
 
 .professional-statement-header {
   font-family: "Cheltenham";
-  font-size: 2rem;
+  font-size: 2.1rem;
   line-height: 2.25rem;
+  margin-top: 0.07rem;
+  padding-left: 0.9rem;
+  text-align: justify;
 }
