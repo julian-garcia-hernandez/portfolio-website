@@ -67,7 +67,10 @@ main {
 }
 
 form {
-  height: 24.74rem;
+  display: flex;
+  flex-direction: column;
+  gap: .075rem;
+  height: 28.15rem;
   margin-left: 0.5rem;
 }
 
@@ -102,6 +105,8 @@ p {
   text-align: justify;
 }
 
+
+
 input,
 textarea {
   width: 100%;
@@ -109,6 +114,8 @@ textarea {
 
 textarea {
   height: 100%;
+  margin: 0;
+  white-space: pre-wrap;
 }
 
 article:nth-of-type(3) section .button-container {
@@ -133,7 +140,7 @@ button {
 article:nth-of-type(1), /*jobs*/
 article:nth-of-type(3), /*skills*/
 article:nth-of-type(4), /*professional statement*/
-article:nth-of-type(5) {
+article:nth-of-type(5) { /*mail form*/
   /**/
   flex: 1;
 }
@@ -213,7 +220,7 @@ figure {
 }
 
 figure img {
-  width: 200px;
+  width: 12.52rem;
   object-fit: cover;
 }
 
