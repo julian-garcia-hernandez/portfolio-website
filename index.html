@@ -213,15 +213,22 @@
         <h5>By J.G HERNANDEZ</h5>
         <section>
           <form>
-            <input id="sender-name" placeholder="Name" name="name" />
-            <input id="email-address" type="email" placeholder="Email" name="email" required />
+            <input id="sender-name" placeholder="Name" name="name" required />
+            <input
+              id="from-email-address"
+              type="email"
+              placeholder="Email"
+              name="email"
+              required
+            />
             <textarea
+              id="email-text"
               class="email"
               placeholder="Write your email here..."
               name="email"
               required
             ></textarea>
-            <button>Send</button>
+            <button id="email-button" type="button">Send</button>
           </form>
         </section>
       </article>
