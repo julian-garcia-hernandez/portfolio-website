@@ -18,7 +18,7 @@ const directionButtons = document.querySelectorAll(
 );
 
 const toEmail = "julian.garcia.hernandez11@gmail.com";
-const emailButton = document.getElementById("email-button");
+const sendEmailButton = document.getElementById("email-button");
 
 let senderName = "",
   from = "",
