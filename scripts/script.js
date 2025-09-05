@@ -47,24 +47,30 @@ function sendEmail() {
 sendEmailButton.addEventListener("click", sendEmail);
 
 let index = 0;
+let company = document.getElementById("company");
+let title = document.getElementById("title");
+let description = document.getElementById("description");
+
 function previousItem() {
   if (index == 0) {
-      index = jobs.length - 1;
-      console.log(jobs[index]);
+    index = jobs.length - 1;
   } else {
-      index--;
-      console.log(jobs[index]);
+    index--;
   }
+  company.textContent = jobs[index].company;
+  title.textContent = jobs[index].title;
+  description.textContent = jobs[index].description;
 }
 
 function nextItem() {
   if (index == jobs.length - 1) {
-      index = 0;
-      console.log(jobs[index]);
+    index = 0;
   } else {
-      index++;
-      console.log(jobs[index]);
+    index++;
   }
+  company.textContent = jobs[index].company;
+  title.textContent = jobs[index].title;
+  description.textContent = jobs[index].description;
 }
 
 directionButtons.forEach((button) => {
