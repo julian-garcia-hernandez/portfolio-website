@@ -54,8 +54,9 @@ function loadInitial() {
   title.textContent = experience["jobs"][jobsIndex].title;
   jobDescription.textContent = experience["jobs"][jobsIndex].description;
 
-  project.textContent = experience["projects"][0].name;
-  projectDescription.textContent = experience["projects"][0].description;
+  project.textContent = experience["projects"][projectsIndex].name;
+  projectDescription.textContent =
+    experience["projects"][projectsIndex].description;
 }
 
 function createSubjectLine(inSenderName) {
