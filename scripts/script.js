@@ -132,9 +132,23 @@ function nextPara(items, itemType) {
 }
 
 directionButtons.forEach((button) => {
-  if (button.className == "next-button") {
-    button.addEventListener("click", nextItem);
-  } else if (button.className == "previous-button") {
-    button.addEventListener("click", previousItem);
+  if (button.className == "previous-button") {
+    button.addEventListener("click", (event) => {
+      articleType =
+        event.currentTarget.parentElement.parentElement.parentElement.getAttribute(
+          "id"
+        );
+      previousPara(experience[articleType], articleType);
+    });
+  } else if (button.className == "next-button") {
+    button.addEventListener("click", (event) => {
+      articleType =
+        event.currentTarget.parentElement.parentElement.parentElement.getAttribute(
+          "id"
+        );
+      nextPara(experience[articleType], articleType);
+    });
   }
 });
+
+loadInitial();
