@@ -50,9 +50,9 @@ let senderName = "",
   body = "";
 
 function loadInitial() {
-  employer.textContent = experience["jobs"][0].employer;
-  title.textContent = experience["jobs"][0].title;
-  jobDescription.textContent = experience["jobs"][0].description;
+  employer.textContent = experience["jobs"][jobsIndex].employer;
+  title.textContent = experience["jobs"][jobsIndex].title;
+  jobDescription.textContent = experience["jobs"][jobsIndex].description;
 
   project.textContent = experience["projects"][0].name;
   projectDescription.textContent = experience["projects"][0].description;
