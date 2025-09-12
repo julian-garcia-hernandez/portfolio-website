@@ -25,6 +25,15 @@ let senderName = "",
   subject = "",
   body = "";
 
+function loadInitial() {
+  employer.textContent = experience["jobs"][0].employer;
+  title.textContent = experience["jobs"][0].title;
+  jobDescription.textContent = experience["jobs"][0].description;
+
+  project.textContent = experience["projects"][0].name;
+  projectDescription.textContent = experience["projects"][0].description;
+}
+
 function createSubjectLine(inSenderName) {
   if (inSenderName != "") {
     return `${inSenderName} — BUSINESS INQUIRY`;
