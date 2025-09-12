@@ -72,7 +72,6 @@ function sendEmail() {
   subject = createSubjectLine(senderName);
   body = document.getElementById("email-text").value;
   body = encodeURIComponent(body);
-  console.log(body);
 
   document.location =
     "mailto:" + toEmail + "?subject=" + subject + "&body=" + body;
@@ -99,8 +98,6 @@ function previousPara(items, itemType) {
     }
     project.textContent = items[projectsIndex].name;
     projectDescription.textContent = items[projectsIndex].description;
-  } else {
-    console.log("no item type provided");
   }
 }
 
@@ -123,14 +120,10 @@ function nextPara(items, itemType) {
     }
     project.textContent = items[projectsIndex].name;
     projectDescription.textContent = items[projectsIndex].description;
-  } else {
-    index++;
   }
-  company.textContent = jobs[index].company;
-  title.textContent = jobs[index].title;
-  description.textContent = jobs[index].description;
 }
 
+let articleType = "";
 directionButtons.forEach((button) => {
   if (button.className == "previous-button") {
     button.addEventListener("click", (event) => {
