@@ -80,25 +80,49 @@ function sendEmail() {
 
 sendEmailButton.addEventListener("click", sendEmail);
 
-let index = 0;
-let company = document.getElementById("company");
-let title = document.getElementById("title");
-let description = document.getElementById("description");
-
-function previousItem() {
-  if (index == 0) {
-    index = jobs.length - 1;
+//only gets triggered if the button is pressed
+function previousPara(items, itemType) {
+  if (itemType == "jobs") {
+    if (jobsIndex == 0) {
+      jobsIndex = items.length - 1;
+    } else {
+      jobsIndex--;
+    }
+    employer.textContent = items[jobsIndex].employer;
+    title.textContent = items[jobsIndex].title;
+    jobDescription.textContent = items[jobsIndex].description;
+  } else if (itemType == "projects") {
+    if (projectsIndex == 0) {
+      projectsIndex = items.length - 1;
+    } else {
+      projectsIndex--;
+    }
+    project.textContent = items[projectsIndex].name;
+    projectDescription.textContent = items[projectsIndex].description;
   } else {
-    index--;
+    console.log("no item type provided");
   }
-  company.textContent = jobs[index].company;
-  title.textContent = jobs[index].title;
-  description.textContent = jobs[index].description;
 }
 
-function nextItem() {
-  if (index == jobs.length - 1) {
-    index = 0;
+//only gets triggered if the button is pressed
+function nextPara(items, itemType) {
+  if (itemType == "jobs") {
+    if (jobsIndex == items.length - 1) {
+      jobsIndex = 0;
+    } else {
+      jobsIndex++;
+    }
+    employer.textContent = items[jobsIndex].employer;
+    title.textContent = items[jobsIndex].title;
+    jobDescription.textContent = items[jobsIndex].description;
+  } else if (itemType == "projects") {
+    if (projectsIndex == items.length - 1) {
+      projectsIndex = 0;
+    } else {
+      projectsIndex++;
+    }
+    project.textContent = items[projectsIndex].name;
+    projectDescription.textContent = items[projectsIndex].description;
   } else {
     index++;
   }
