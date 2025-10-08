@@ -144,4 +144,11 @@ directionButtons.forEach((button) => {
   }
 });
 
+let jobs = document.getElementById("jobs");
+/*
+get jobs on the dom
+if the screen size is a phone
+  append all but first jobs to the DOM jobs
+*/
+
 loadInitial();
