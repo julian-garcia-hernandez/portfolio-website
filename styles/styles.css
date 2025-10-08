@@ -200,11 +200,13 @@ h4 {
   text-align: center;
   font-size: 1.25rem;
   margin: 0;
+  line-height: 1em;
 }
 
 h5 {
   text-align: center;
   margin: 0 0 0.25rem 0;
+  line-height: 1em;
 }
 
 article:nth-of-type(4) figure {
@@ -234,7 +236,7 @@ figcaption {
   text-align: center;
 }
 
-article:nth-of-type(2) h2 {
+.projects-header {
   text-align: center;
 }
 
@@ -356,7 +358,7 @@ article:nth-of-type(2) h2 {
 }
 
 /* small devices phones */
-@media screen and (width <= 428px) {
+@media screen and (width <= 440px) {
   body {
     display: block;
     margin: 0.5rem 1.25rem 0.5rem 1.25rem;
@@ -381,7 +383,9 @@ article:nth-of-type(2) h2 {
 
   main {
     flex-direction: column;
+    margin-top: 0;
   }
+
   /* .website-metadata span:nth-child(1), */
   /* .website-metadata span:nth-child(2), */
   /* .website-metadata time, */
@@ -395,33 +399,71 @@ article:nth-of-type(2) h2 {
 
   .h2-horizontal-line {
     border-top: 1px solid rgb(0, 0, 0);
-    margin: 0.75rem 35% 0.75rem 35%
+    margin: 0.5rem 37% 0.85rem 37%;
   }
 
-  main {
-    margin-top: 0;
+  .h5-horizontal-line {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin: 0.5rem 37% 0.85rem 37%;
   }
 
-  .jobs-header {
-    text-align: justify;
+  .article-horizontal-line {
+    border-top: 1px solid rgb(0, 0, 0);
+    margin: 1rem 0 1rem 0;
   }
 
-  .jobs-header br {
+  .jobs-header,
+  .projects-header {
+    text-align: left;
+    padding: 0;
+  }
+
+  .jobs-header br,
+  .projects-header br {
     display: none;
   }
+
+  article:nth-of-type(2) .horizontal-line {
+    margin: 0.75rem 37% 0.75rem 37%;
+  }
+
   .horizontal-line {
-    margin: 1rem 35% 1rem 35%;
+    margin: 0.75rem 37% 0.75rem 37%;
   }
 
   .vertical-line {
     display: none;
   }
 
-  section p {
+  article:nth-of-type(1) section p,
+  article:nth-of-type(2) section p,
+  article:nth-of-type(3) section p {
     margin: 0;
-    height: 30rem;
+    padding: 0;
+    height: auto;
     scrollbar-width: none;
     overflow-y: visible;
+  }
+
+  .headshot-figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.6rem;
+  }
+
+  .professional-statement-header {
+    text-align: left;
+    padding: 0;
+  }
+
+  .professional-statement-header br {
+    display: none;
+  }
+
+  figure img {
+    width: 65%;
   }
 
   .button-container {
