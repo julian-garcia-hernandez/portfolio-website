@@ -44,6 +44,11 @@ const directionButtons = document.querySelectorAll(
 const toEmail = "julian.garcia.hernandez11@gmail.com";
 const sendEmailButton = document.getElementById("email-button");
 
+const authorHeading = document.createElement("h5");
+authorHeading.textContent = "J.G HERNANDEZ";
+const horizontalLine = document.createElement("div");
+horizontalLine.className = "horizontal-line";
+
 let senderName = "",
   from = "",
   subject = "",
@@ -144,11 +149,55 @@ directionButtons.forEach((button) => {
   }
 });
 
-let jobs = document.getElementById("jobs");
+function displayMobile() {
+  const jobsArray = experience["jobs"];
+  const jobSection = document.createElement("section");
+  const employerHeading = document.createElement("h3");
+  const titleHeading = document.createElement("h4");
+  const descriptionPara = document.createElement("p");
+
+  for (let i = 1; i < jobsArray.length; i++) {
+    employerHeading.textContent = jobsArray[i].employer;
+    titleHeading.textContent = jobsArray[i].title;
+    descriptionPara.textContent = jobsArray[i].description;
+
+    employerHeading.className = "employer";
+    titleHeading.className = "title";
+    descriptionPara.className = "job-description";
+
+    jobSection.appendChild(employerHeading);
+    jobSection.appendChild(horizontalLine);
+    jobSection.appendChild(titleHeading);
+    jobSection.appendChild(horizontalLine);
+    jobSection.appendChild(authorHeading);
+    jobSection.appendChild(descriptionPara);
+
+    jobs.appendChild(jobSection);
+  }
+}
+
+if (window.innerWidth <= 440) {
+  displayMobile();
+}
 /*
-get jobs on the dom
-if the screen size is a phone
-  append all but first jobs to the DOM jobs
+JS
+get jobs on the dom into a variable called domJobs
+if the window size is a phone
+  append all but first jobs to the DOM jobs (this is from the storage in the jobs variable)
+  create the following elements: section, h3, h4, h5, p
+  fill the elements with the appropriate text
+  style the elements with correct classes
+  append the following to the section:
+    - h3 - employer
+    - h4 - title
+    - h5 - author
+    - p - description
+
+  append the section to the article
+    - 
+    
+
+
 */
 
 loadInitial();
