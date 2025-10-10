@@ -46,8 +46,12 @@ const sendEmailButton = document.getElementById("email-button");
 
 const authorHeading = document.createElement("h5");
 authorHeading.textContent = "J.G HERNANDEZ";
+
 const horizontalLine = document.createElement("div");
 horizontalLine.className = "horizontal-line";
+
+const sectionLine = document.createElement("div");
+sectionLine.className = "section-horizontal-line";
 
 let senderName = "",
   from = "",
@@ -165,11 +169,13 @@ function displayMobile() {
     titleHeading.className = "title";
     descriptionPara.className = "job-description";
 
+    jobSection.appendChild(sectionLine);
     jobSection.appendChild(employerHeading);
-    jobSection.appendChild(horizontalLine);
+    jobSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
     jobSection.appendChild(titleHeading);
-    jobSection.appendChild(horizontalLine);
+    jobSection.appendChild(horizontalLine.cloneNode());
     jobSection.appendChild(authorHeading);
+    jobSection.appendChild(horizontalLine.cloneNode());
     jobSection.appendChild(descriptionPara);
 
     jobs.appendChild(jobSection);
@@ -179,25 +185,5 @@ function displayMobile() {
 if (window.innerWidth <= 440) {
   displayMobile();
 }
-/*
-JS
-get jobs on the dom into a variable called domJobs
-if the window size is a phone
-  append all but first jobs to the DOM jobs (this is from the storage in the jobs variable)
-  create the following elements: section, h3, h4, h5, p
-  fill the elements with the appropriate text
-  style the elements with correct classes
-  append the following to the section:
-    - h3 - employer
-    - h4 - title
-    - h5 - author
-    - p - description
-
-  append the section to the article
-    - 
-    
-
-
-*/
 
 loadInitial();
