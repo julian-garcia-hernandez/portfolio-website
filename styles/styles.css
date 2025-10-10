@@ -468,7 +468,10 @@ figcaption {
   }
 
   figure img {
-    width: 65%;
+    width: 360px;
+    height: 360px;
+    object-fit: cover;
+    object-position: 20% 27%;
   }
 
   .button-container {
