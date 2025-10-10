@@ -45,7 +45,7 @@ const toEmail = "julian.garcia.hernandez11@gmail.com";
 const sendEmailButton = document.getElementById("email-button");
 
 const authorHeading = document.createElement("h5");
-authorHeading.textContent = "J.G HERNANDEZ";
+authorHeading.textContent = "By J.G HERNANDEZ";
 
 const horizontalLine = document.createElement("div");
 horizontalLine.className = "horizontal-line";
@@ -175,7 +175,6 @@ function displayMobile() {
     jobSection.appendChild(titleHeading);
     jobSection.appendChild(horizontalLine.cloneNode());
     jobSection.appendChild(authorHeading);
-    jobSection.appendChild(horizontalLine.cloneNode());
     jobSection.appendChild(descriptionPara);
 
     jobs.appendChild(jobSection);
