@@ -467,11 +467,19 @@ figcaption {
     display: none;
   }
 
+  .contact-header {
+    margin-left: 0;
+  }
+
   figure img {
     width: 360px;
     height: 360px;
     object-fit: cover;
     object-position: 20% 27%;
+  }
+
+  form {
+    margin-left: 0;
   }
 
   .button-container {
