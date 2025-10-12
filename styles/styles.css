@@ -336,7 +336,7 @@ figcaption {
 
 .skills-image {
   object-fit: cover;
-  border: solid 1px rgb(135, 135, 135);
+  border: solid 1px rgb(47, 40, 40);
 }
 
 .skills {
@@ -487,7 +487,7 @@ figcaption {
     height: 360px;
     object-fit: cover;
     object-position: 20% 27%;
-    border: solid 1px rgb(64, 64, 64);
+    border: solid 1px rgb(47, 40, 40);
   }
 
   form {
