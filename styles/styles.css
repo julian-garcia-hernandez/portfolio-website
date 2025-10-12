@@ -70,24 +70,14 @@ main {
 form {
   display: flex;
   flex-direction: column;
-  gap: 0.075rem;
+  gap: 0.25rem;
   height: 28.15rem;
   margin-left: 0.5rem;
-}
-
-article:nth-of-type(4) section p {
-  height: 17.8rem;
 }
 
 article:nth-of-type(3) section p,
 article:nth-of-type(1) section p {
   height: 30.3rem;
-}
-
-article:nth-of-type(4) section p,
-article:nth-of-type(3) section p {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
 }
 
 article:nth-of-type(1) section p {
@@ -96,7 +86,6 @@ article:nth-of-type(1) section p {
 
 section p {
   margin: 0;
-  height: 30rem;
   scrollbar-width: none;
   overflow-y: scroll;
 }
@@ -109,6 +98,9 @@ p {
 input,
 textarea {
   width: 100%;
+  height: 1.75rem;
+  box-shadow: 1px 1px 1px rgb(137, 137, 137);
+  border: solid 1px rgb(85, 85, 85);
 }
 
 textarea {
@@ -131,9 +123,13 @@ article:nth-of-type(3) section .button-container {
 button {
   width: 100%;
   font-family: "Newsreader";
+  border-color: rgb(85, 85, 85);
   border-width: 1px;
   border-radius: 0;
   line-height: 1.5rem;
+  height: 1.75rem;
+  box-shadow: 1px 1px 1px rgb(117, 117, 117);
+  padding: 1px 2px 1px 2px;
 }
 
 article:nth-of-type(1), /*jobs*/
@@ -330,10 +326,17 @@ figcaption {
   margin-top: 1rem;
 }
 
+.skills-figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
 .skills-image {
   object-fit: cover;
-  height: 24.8rem;
-  width: 47rem;
+  border: solid 1px rgb(135, 135, 135);
 }
 
 .skills {
@@ -341,7 +344,6 @@ figcaption {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
   margin-top: 1.5rem;
-  padding: 0.75rem 0.75rem 0.75rem 0.75rem;
 }
 
 .skills :nth-child(4) {
@@ -450,6 +452,15 @@ figcaption {
     overflow-y: visible;
   }
 
+  .skills-header {
+    margin-top: 0;
+  }
+
+  .skills {
+    border: none;
+    margin: 0 1.5rem 0 1.5rem;
+  }
+
   .headshot-figure {
     display: flex;
     flex-direction: column;
@@ -476,13 +487,19 @@ figcaption {
     height: 360px;
     object-fit: cover;
     object-position: 20% 27%;
+    border: solid 1px rgb(64, 64, 64);
   }
 
   form {
     margin-left: 0;
+    height: auto;
   }
 
   .button-container {
     display: none;
+  }
+
+  textarea {
+    height: 25%;
   }
 }
