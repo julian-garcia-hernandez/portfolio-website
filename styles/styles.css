@@ -452,6 +452,7 @@ figcaption {
     height: auto;
     scrollbar-width: none;
     overflow-y: visible;
+    text-indent: 1.75rem;
   }
 
   .skills-header {
