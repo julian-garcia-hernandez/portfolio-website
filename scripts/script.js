@@ -15,11 +15,13 @@ const experience = {
   ],
   projects: [
     {
-      name: "This Website (Portfolio)",
+      context: "For Myself",
+      name: "This Website",
       description:
         "This project has been the most fun I have had building something. The idea was to make something that was unique amongst engineering portfolios. To standout. I did not want to make something that said, \"I work in the tech field.\" Even though I work in the technology sector, I wanted my portfolio to have some type of analog feel to it. I thought a good way of doing this was to portray my career and who I am through a more antiquated medium: the newspaper. There's a certain juxtaposition that happens when you place more advanced technology such as a website next to its more antiquated forms, in this case a newspaper. I'm also just a huge fan of older media. <br/>In terms of career development, I wanted to go back and ground myself on the fundamentals of web development. This project was made with HTML, CSS, and Javascript. The actual idea of the newspaper came from my love for older forms of media. I feel bad about saying that newspapers are outdated. I feel bad that times change always, forever and I guess this website was an artistic effort of holding onto those moments that will inevitably pass. Almost nobody reads newspapers anymore, and eventually that form of media will be obsolete. I thought it would be pretty ironic for someone who works with computer technology and information on such a granular level to display their work in such a historic way. I wanted to juxtapose all of these technological advancements against the backdrop of such a historic way of presenting information. Overall, the project took me about a month and a half to plan and create. <br/>I think that the most challenging aspect to a project like this was the design. I obviously stole the idea from the NY Times and copied their formatting, but found that their style guide did not lend itself well to the website format. My originality came in scrollable columns, something that is not possible on paper. This allows for paragraphs like the project and job description to be kept neatly and confined to the newspaper format even if they are long pieces of text. I think one area of improvement would be to give the website more pictures or interactibility. Maybe, include like a newspaper game like a crossword, word search, or sudoku. The idea is to make the website more fun in some way for the user, and not have them overwhelmed by the long pieces of text.",
     },
     {
+      context: "SENIOR DESIGN",
       name: "OpenGrader",
       description:
         "When my team had to think of an idea for our senior design project, first we spent some time looking for problems in our environment. As CS students, we noticed many of our peers struggling to receive their grades on time. In an effort to address this issue, my team and I came up with OpenGrader. OpenGrader sought to reduce grading time. Essentially what that means is make it easier for TAs or professors to grade the large amount of assignments they receive. We started to think about how we would acheive this. That is when we came up with ideas for features like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support. My biggest contribution to the project was syntax highlighting, a feature meant to ease code readibility. I also worked on unit testing for the frontend. What I found the most challenging was learning the tools, languages and frameworks. In this project, I was introduced to Docker, Next.js and Go for the first time. It was somewhat overwhelming to learn various things at the same time, especially while trying to build something, but I managed to contribute something useful to the project. Granted, I really enjoyed working on OpenGrader. It helped me solidfy all the engineering principles that are super important: requirement gathering, design, implementation, and feedback.",
@@ -30,10 +32,13 @@ const experience = {
 let index = 0;
 let jobsIndex = 0;
 let projectsIndex = 0;
+
+const jobs = document.getElementById("jobs");
 let employer = document.getElementById("employer");
 let title = document.getElementById("title");
 let jobDescription = document.getElementById("job-description");
 
+const projects = document.getElementById("projects");
 let project = document.getElementById("project");
 let projectDescription = document.getElementById("project-description");
 
@@ -153,36 +158,66 @@ directionButtons.forEach((button) => {
   }
 });
 
-function displayMobile() {
-  const jobsArray = experience["jobs"];
-  const jobSection = document.createElement("section");
-  const employerHeading = document.createElement("h3");
-  const titleHeading = document.createElement("h4");
-  const descriptionPara = document.createElement("p");
+function displayArticle(articleType) {
+  if (articleType == "jobs") {
+    const jobsArray = experience["jobs"];
+    const jobsSection = document.createElement("section");
+    const employerHeading = document.createElement("h3");
+    const titleHeading = document.createElement("h4");
+    const descriptionPara = document.createElement("p");
 
-  for (let i = 1; i < jobsArray.length; i++) {
-    employerHeading.textContent = jobsArray[i].employer;
-    titleHeading.textContent = jobsArray[i].title;
-    descriptionPara.textContent = jobsArray[i].description;
+    for (let i = 1; i < jobsArray.length; i++) {
+      employerHeading.textContent = jobsArray[i].employer;
+      titleHeading.textContent = jobsArray[i].title;
+      descriptionPara.textContent = jobsArray[i].description;
 
-    employerHeading.className = "employer";
-    titleHeading.className = "title";
-    descriptionPara.className = "job-description";
+      employerHeading.className = "employer";
+      titleHeading.className = "title";
+      descriptionPara.className = "job-description";
 
-    jobSection.appendChild(sectionLine);
-    jobSection.appendChild(employerHeading);
-    jobSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
-    jobSection.appendChild(titleHeading);
-    jobSection.appendChild(horizontalLine.cloneNode());
-    jobSection.appendChild(authorHeading);
-    jobSection.appendChild(descriptionPara);
+      jobsSection.appendChild(sectionLine);
+      jobsSection.appendChild(employerHeading);
+      jobsSection.appendChild(horizontalLine.cloneNode()); //this might not work if you add more jobs experience
+      jobsSection.appendChild(titleHeading);
+      jobsSection.appendChild(horizontalLine.cloneNode());
+      jobsSection.appendChild(authorHeading);
+      jobsSection.appendChild(descriptionPara);
 
-    jobs.appendChild(jobSection);
+      jobs.appendChild(jobsSection);
+    }
+  } else if (articleType == "projects") {
+    const projectsArray = experience["projects"];
+
+    const projectsSection = document.createElement("section");
+    const projectContext = document.createElement("h3");
+    const projectHeading = document.createElement("h4");
+    const projectDescription = document.createElement("p");
+
+    for (let i = 1; i < projectsArray.length; i++) {
+      projectContext.textContent = projectsArray[i].context;
+      projectHeading.textContent = projectsArray[i].name;
+      projectDescription.textContent = projectsArray[i].description;
+
+      projectContext.className = "employer"; //FIX THIS, THE CLASSNAMES NEED TO BE MORE APPROPRIATELY NAMED
+      projectHeading.className = "title";
+      projectDescription.className = "job-description";
+
+      projectsSection.appendChild(sectionLine.cloneNode());
+      projectsSection.appendChild(projectContext);
+      projectsSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
+      projectsSection.appendChild(projectHeading);
+      projectsSection.appendChild(horizontalLine.cloneNode());
+      projectsSection.appendChild(authorHeading.cloneNode(true));
+      projectsSection.appendChild(projectDescription);
+
+      projects.appendChild(projectsSection);
+    }
   }
 }
 
-if (window.innerWidth <= 440) {
-  displayMobile();
-}
-
 loadInitial();
+
+if (window.innerWidth <= 440) {
+  displayArticle("jobs");
+  displayArticle("projects");
+}
