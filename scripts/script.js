@@ -183,6 +183,20 @@ function displayArticle(articleType) {
       jobsSection.appendChild(titleHeading);
       jobsSection.appendChild(horizontalLine.cloneNode());
       jobsSection.appendChild(authorHeading);
+
+      if (titleHeading.textContent == "Engineering Intern") {
+        const jobFigure = document.createElement("figure");
+        const jobImage = document.createElement("img");
+        jobImage.setAttribute("src", "images/work-experience/internship.jpg");
+        const jobCaption = document.createElement("figcaption");
+        jobCaption.textContent =
+          "A photo from a network event the Dell Summit 2022.";
+        jobFigure.appendChild(jobImage);
+        jobFigure.appendChild(jobCaption);
+        jobsSection.appendChild(jobFigure);
+        jobsSection.appendChild(horizontalLine.cloneNode());
+      }
+      
       jobsSection.appendChild(descriptionPara);
 
       jobs.appendChild(jobsSection);
@@ -210,6 +224,7 @@ function displayArticle(articleType) {
       projectsSection.appendChild(projectHeading);
       projectsSection.appendChild(horizontalLine.cloneNode());
       projectsSection.appendChild(authorHeading.cloneNode(true));
+
       projectsSection.appendChild(projectDescription);
 
       projects.appendChild(projectsSection);
@@ -225,10 +240,3 @@ if (window.innerWidth <= 440) {
 
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
 }
-
-/*
-if the screen is mobile (400px <=)
-  use the square image
-  - select the image
-  - change the src attribute
-*/
