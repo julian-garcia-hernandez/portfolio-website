@@ -33,6 +33,8 @@ let index = 0;
 let jobsIndex = 0;
 let projectsIndex = 0;
 
+const skillsImage = document.getElementById("skills-image");
+
 const jobs = document.getElementById("jobs");
 let employer = document.getElementById("employer");
 let title = document.getElementById("title");
@@ -220,4 +222,13 @@ loadInitial();
 if (window.innerWidth <= 440) {
   displayArticle("jobs");
   displayArticle("projects");
+
+  skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
 }
+
+/*
+if the screen is mobile (400px <=)
+  use the square image
+  - select the image
+  - change the src attribute
+*/
