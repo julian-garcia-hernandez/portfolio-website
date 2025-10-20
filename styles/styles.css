@@ -494,6 +494,10 @@ figcaption {
     border: solid 1px rgb(47, 40, 40);
   }
 
+  .working-img {
+    object-position: 50% 27%;
+  }
+
   form {
     margin-left: 0;
     height: auto;
