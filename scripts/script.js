@@ -191,12 +191,13 @@ function displayArticle(articleType) {
         const jobCaption = document.createElement("figcaption");
         jobCaption.textContent =
           "A photo from a network event the Dell Summit 2022.";
+
         jobFigure.appendChild(jobImage);
         jobFigure.appendChild(jobCaption);
         jobsSection.appendChild(jobFigure);
         jobsSection.appendChild(horizontalLine.cloneNode());
       }
-      
+
       jobsSection.appendChild(descriptionPara);
 
       jobs.appendChild(jobsSection);
