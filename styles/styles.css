@@ -214,10 +214,6 @@ article:nth-of-type(4) figure {
   align-items: center;
 }
 
-article:nth-of-type(4) figure figcaption {
-  margin-top: 0.3rem;
-}
-
 figure {
   margin: 0;
 }
@@ -228,11 +224,9 @@ figure img {
   filter: grayscale(100%);
 }
 
-article:nth-of-type(2) figure figcaption {
-  margin-top: 0.3rem;
-}
 figcaption {
   text-align: center;
+  margin-top: 0.3rem;
 }
 
 .projects-header {
