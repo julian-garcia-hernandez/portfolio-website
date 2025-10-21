@@ -100,6 +100,8 @@ textarea {
   width: 100%;
   height: 1.75rem;
   border-radius: 0;
+  font-family: "Newsreader";
+  padding-left: .25rem;
   /* box-shadow: 1px 1px 1px rgb(137, 137, 137); */
   border: solid 1px rgb(85, 85, 85);
 }
@@ -124,8 +126,7 @@ article:nth-of-type(3) section .button-container {
 button {
   width: 100%;
   font-family: "Newsreader";
-  border-color: rgb(85, 85, 85);
-  border-width: 1px;
+  border: 1px solid black;
   border-radius: 0;
   line-height: 1.5rem;
   height: 1.75rem;
@@ -497,6 +498,6 @@ figcaption {
   }
 
   textarea {
-    height: 25%;
+    height: 3.5rem;
   }
 }
