@@ -339,9 +339,9 @@ figcaption {
   margin-top: 1.5rem;
 }
 
-.skills :nth-child(4) {
+/* .skills :nth-child(4) {
   margin-bottom: 0rem;
-}
+} */
 
 .professional-statement-header {
   font-family: "Cheltenham";
@@ -352,7 +352,7 @@ figcaption {
   text-align: justify;
 }
 
-/* small devices phones */
+/* mobile */
 @media screen and (width <= 440px) {
   body {
     display: block;
@@ -437,7 +437,11 @@ figcaption {
     height: auto;
     scrollbar-width: none;
     overflow-y: visible;
-    text-indent: 1.75rem;
+    line-height: calc(1.49 * 1em);
+    text-align: start;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
   }
 
   .skills-header {
@@ -446,7 +450,29 @@ figcaption {
 
   .skills {
     border: none;
-    margin: 0 1.5rem 0 1.5rem;
+    margin: 0;
+  }
+
+  .skills p {
+    text-align: start;
+    line-height: calc(1.49 * 1em);
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    text-transform: capitalize;
+    /* white-space: collapse;
+    word-break: normal;
+    word-spacing: 0px;
+    overflow-wrap: break-word;
+    word-wrap: break-word; */
+  }
+
+  .decapitalize {
+    text-transform: lowercase;
+  }
+
+  .skills h5 {
+    font-size: 1rem;
   }
 
   .headshot-figure {
