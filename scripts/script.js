@@ -4,13 +4,13 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "I worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also wrote a majority of our teams' unit tests.",
+        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also wrote a majority of our teams' unit tests.",
     },
     {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "This internship lasted 10 weeks. In that time, I built a Microsoft Teams chat bot. This chat bot allowed my team to be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, but with a chat interface. At the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
+        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
     },
   ],
   projects: [
@@ -18,13 +18,13 @@ const experience = {
       context: "For Myself",
       name: "This Website",
       description:
-        'This project has been the most fun I have had building something. The idea was to make something that was unique amongst engineering portfolios. To standout. I did not want to make something that said, "I work in the tech field." I wanted my portfolio to have an analog feel to it. It had to feel retro and antiquated. I started to think about historical examples of how humans have presented information to a wide audience. That\'s when the idea of a newspaper came along.\n\tI chose to build this project in HTML, CSS, and Javascript. The idea was to ground myself on web development fundamentals.\n The most challenging aspect was designing for different screen sizes. It was hard to still make something feel like a newspaper if it was being rendered inside a phone screen. Even though it was challenging, it was fun figuring out how modern interfaces can still make use of older, but tried and true methods of presenting information. This would make for an intersting combination of UI/UX, technical writing, and text styling. A scrollable newspaper column was my favorite UI element to come up with.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) could make the website more fun to use.\n\t',
+        'The idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
     },
     {
       context: "SENIOR DESIGN",
       name: "OpenGrader",
       description:
-        "A problem many CS students faced was receiving their grades in a timely manner. OpenGrader sought to reduce grading time. Features like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support aimed to make grading easier and quicker for TAs. My biggest contribution to the project was syntax highlighting, but I wrote unit tests for the frontend. This project solidified important engineering concepts like requirement gathering, designing around those requirements, and iterating upon that design through user feedback.",
+        "\tIt's pretty common for TAs and graders to take long on grading assignments. The sheer number of assignments they have to go through is only part of the problem. Reviewing code in within itself is pretty time consuming.\n\tOpenGrader sought to mitigate some of that struggle for graders.\n\tFeatures like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support aimed to make grading easier and quicker for TAs.\n\tMy biggest contribution to the project was syntax highlighting and front-end unit tests.",
     },
   ],
 };
