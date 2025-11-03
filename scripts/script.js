@@ -29,6 +29,9 @@ const experience = {
   ],
 };
 
+const aboutMeText =
+  "\tI have one year and seven months of professional experience building software. My strength is front-end development. My career aspiration is to make websites for artists and creatives.\n\tI would love to help people share their vision with the rest of world.";
+
 let index = 0;
 let jobsIndex = 0;
 let projectsIndex = 0;
@@ -43,6 +46,8 @@ let jobDescription = document.getElementById("job-description");
 const projects = document.getElementById("projects");
 let project = document.getElementById("project");
 let projectDescription = document.getElementById("project-description");
+
+const aboutMePara = document.getElementById("about-me-para");
 
 const directionButtons = document.querySelectorAll(
   ".previous-button, .next-button"
@@ -73,6 +78,8 @@ function loadInitial() {
   project.textContent = experience["projects"][projectsIndex].name;
   projectDescription.textContent =
     experience["projects"][projectsIndex].description;
+
+  aboutMePara.textContent = aboutMeText;
 }
 
 function createSubjectLine(inSenderName) {

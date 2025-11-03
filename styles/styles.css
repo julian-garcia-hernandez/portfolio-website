@@ -446,10 +446,6 @@ figcaption {
     white-space-collapse: preserve;
   }
 
-  article:nth-of-type(4) section p {
-    white-space-collapse: unset;
-  }
-
   .professional-statement section p {
     white-space-collapse: unset;
   }
