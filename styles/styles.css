@@ -443,6 +443,15 @@ figcaption {
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+    white-space-collapse: preserve;
+  }
+
+  article:nth-of-type(4) section p {
+    white-space-collapse: unset;
+  }
+
+  .professional-statement section p {
+    white-space-collapse: unset;
   }
 
   .skills-header {
