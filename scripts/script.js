@@ -4,7 +4,7 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also wrote a majority of our teams' unit tests.",
+        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also all the unit tests for my team's codebase. My efforts brought code coverage from the low 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.",
     },
     {
       employer: "DELL TECHNOLOGIES",
@@ -30,7 +30,7 @@ const experience = {
 };
 
 const aboutMeText =
-  "\tI have one year and seven months of professional experience building software. My strength is front-end development. My career aspiration is to make websites for artists and creatives.\n\tI would love to help people share their vision with the rest of world.";
+  "\tI have one year and seven months of professional experience building software. My strength is front-end development.\n\tMy career aspiration is to help companies share their vision with the rest of world.";
 
 let index = 0;
 let jobsIndex = 0;
@@ -247,4 +247,16 @@ if (window.innerWidth <= 440) {
   displayArticle("projects");
 
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
+} else if (440 <= window.innerWidth <= 820) {
+  displayArticle("jobs");
+  displayArticle("projects");
+  skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
+}
+
+const pad = document.getElementById("pad");
+function ellipsePadding() {
+  pad.textContent = pad.textContent.padStart(14, " . ");
+}
+if (440 <= window.innerWidth <= 820) {
+  ellipsePadding();
 }

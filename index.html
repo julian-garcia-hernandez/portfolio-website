@@ -28,7 +28,7 @@
       </aside>
     </header>
     <div class="website-metadata">
-      <span>VOL. I . . . . . . . . . . No. I</span>
+      <span>VOL. I<span id="pad"></span> No. I</span>
       <span>Created By J.G Hernandez</span>
       <time>EARTH, FRIDAY, JULY 25, 2025</time>
       <span class="external-links">
@@ -40,10 +40,6 @@
     <div class="h1-horizontal-line"></div>
     <main>
       <article id="jobs" class="jobs">
-        <!-- <h2 class="jobs-header"> FIXME: //this is still needed for it to look normal in desktop view
-          &nbsp;&nbsp;RELATED JOBS<br />&nbsp;&nbsp;&nbsp;I HAVE HELD<br />
-          &nbsp;&nbsp;&nbsp;&nbsp;IN THE PAST
-        </h2> -->
         <h2 class="jobs-header">RELATED JOBS I HAVE HELD IN THE PAST</h2>
         <div class="h2-horizontal-line"></div>
         <section>
@@ -57,34 +53,7 @@
             <figcaption>The Dell headquarters in Round Rock, TX.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="job-description">
-            &emsp;I built features for Dell's
-            <a href="https://www.dell.com/support/home/en-us">
-              self-support website</a
-            >; a website customers used to troubleshoot their devices.<br />
-            &emsp;I fixed front end issues. It was always some accessibility
-            issue that I needed to fix for a specific user agent. Other days I
-            wrote unit tests for my colleagues' code.<br />
-            &emsp;I used ASP.NET MVC to build features for our products. We used
-            Gitlab for version control, Jira for product management, and Agile
-            for workflow.
-            <br />
-            &emsp;My biggest strength is establishing relationships in person.
-            Leaving impressions was easier in person than over Teams.
-            Thankfully, Dell held two conferences that I got to attend. I
-            networked with many lovely folks. <br />
-            &emsp;My weakness is overspecification, I sometimes get lost in the
-            smaller details rather than focusing on the bigger picture. However,
-            I have been told that I notice small, but crucial details that would
-            otherwise go unseen.
-            <br />
-            &emsp;The people at Dell made sure to tell me how I could reach my
-            full potential. They hosted many developmental program for my peers
-            and I to learn about networking, new technologies, and
-            <br />
-            &emsp;I worked there
-            <strong>a year and seven months</strong>.<br />
-          </p>
+          <p id="job-description"></p>
           <div class="button-container">
             <button class="previous-button">Previous</button>
             <button class="next-button">Next</button>
@@ -97,13 +66,7 @@
         <h2 class="skills-header">
           The Skills: Everything That I Know Or Have Worked With
         </h2>
-        <figure class="skills-figure">
-          <!-- <img
-            class="skills-image"
-            src="images/logos/composite-image-bw_2.png"
-            width="865"
-            height="486.56"
-          /> -->
+        <figure class="skills-figure"> 
           <img
             id="skills-image"
             class="skills-image"
@@ -143,14 +106,11 @@
             conflict management
           </p>
         </div>
-      </article>
+      </article> 
 
       <!-- <div class="vertical-line"></div> -->
-      <div class="article-horizontal-line"></div>
-      <article id="projects">
-        <!-- <h2 class="projects-header">
-          PROJECTS I<br />&nbsp;HAVE MADE<br />&nbsp;AND FINISHED
-        </h2> -->
+       <div class="article-horizontal-line"></div>
+       <article id="projects" class="projects"> 
         <h2 class="projects-header">PROJECTS I HAVE MADE AND FINISHED</h2>
         <div class="horizontal-line"></div>
         <section>
@@ -159,38 +119,12 @@
           <h4 id="project">OpenGrader</h4>
           <div class="horizontal-line"></div>
           <h5>By J.G HERNANDEZ</h5>
-          <figure>
+          <figure class="working-figure">
             <img class="working-img" src="images/me/working.jpg" />
             <figcaption>Me working on this website.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="project-description">
-            &emsp; When my team had to think of an idea for our senior design
-            project, first we spent some time looking for problems in our
-            environment. As CS students, we noticed many of our peers struggling
-            to receive their grades on time. In an effort to address this issue,
-            my team and I came up with OpenGrader.
-            <br />
-            &emsp; OpenGrader sought to reduce grading time. Essentially what
-            that means is make it easier for TAs or professors to grade the
-            large amount of assignments they receive. We started to think about
-            how we would acheive this. That is when we came up with ideas for
-            features like file test cases (a.k.a grading automation), inline
-            commenting (student feedback), and multi-language support.
-            <br />
-            &emsp; My biggest contribution to the project was syntax
-            highlighting, a feature meant to ease code readibility. I also
-            worked on unit testing for the frontend. <br />
-            &emsp; What I found the most challenging was learning the tools,
-            languages and frameworks. In this project, I was introduced to
-            Docker, Next.js and Go for the first time. It was somewhat
-            overwhelming to learn various things at the same time, especially
-            while trying to build something, but I managed to contribute
-            something useful to the project.<br />
-            &emsp; Granted, I really enjoyed working on OpenGrader. It helped me
-            solidfy all the engineering principles that are super important:
-            requirement gathering, design, implementation, and feedback.
-            <br />
+          <p id="project-description" class="project-description">
           </p>
           <div class="button-container">
             <button class="previous-button">Previous</button>
@@ -198,7 +132,7 @@
           </div>
         </section>
       </article>
-      <!-- <div class="vertical-line"></div> -->
+      <!-- <div class="vertical-line"></div>  -->
       <div class="article-horizontal-line"></div>
       <article class="professional-statement">
         <h2 class="professional-statement-header">
@@ -210,22 +144,17 @@
           <div class="horizontal-line"></div>
           <h5>By J.G HERNANDEZ</h5>
           <figure class="headshot-figure">
-            <img src="images/me/headshot.jpg" />
+            <img src="images/me/me.png" class="headshot-image"/>
             <figcaption>A photo of myself.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
           <p id="about-me-para">
-            &emsp;I have one year and seven months of professional experience
-            building software. My strength is front-end development. My career
-            aspiration is to make websites for artists/creatives. I think its
-            super cool make and share art so I would want to help artists do
-            just that.<br />
           </p>
         </section>
       </article>
-      <!-- <div class="vertical-line"></div> -->
+       <!-- <div class="vertical-line"></div>  -->
       <div class="article-horizontal-line"></div>
-      <article>
+      <article class="contact-form">
         <h2 class="contact-header">
           CONTACT ME USING THE FOLLOWING FORM BELOW
         </h2>
