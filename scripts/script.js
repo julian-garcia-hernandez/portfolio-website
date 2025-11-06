@@ -4,38 +4,50 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "I was employed at Dell for a year and seven months. When I was there, I worked in the Dell self-support team. We were responsible for maintaining the dell.com/support website, a self-service solution for any troublshooting needs a dell client may have. During my time there, I wore several hats. Some days I would get assigned to work on the frontend; do some changes to the layout of certain forms or fields. Other days I spent some time writing unit tests. It really just depended on what type of story I would get assigned to work on by my dev lead and product manager. The language of choice was C# and we used the ASP.NET MVC Framework to build our products. For version control, we used Gitlab, and for product management, Jira. We organized our using Agile Methodolgies. Communication was entirely over Microsoft Teams since all of our team was spread across different parts of the world. I think that my biggest strength in a role like this was establishing relationships in person. I find that its easier for me to leave an impression in the physical presence of another human being, as opposed to alone, very often without the physical representation of who I am. Sure there were cameras on the laptops, but many times people do not like turning them on. As a privacy freak myself, I completely understand that sentiment and do not feel super comfortable with a camera in my face. Luckily, Dell sponsored various conferences in which I got to meet and network with many wonderful people. That really made up for the majority of the time spent online. I think my biggest weakness in a role like this was getting over imposter syndrome. I just always felt like there was a skill gap of where I was, and where I needed to be. Not just technically, but also in terms of soft skills. I felt that my profeciency as a communicator was lacking. Prior to this job I thought that I was a good communicator, but being in those panels with cross functional teams was a humbling experience. I know now that I was being to hard on myself, and that there are other factors that come into play that determine my development; some of which I have no control over. What I loved the most about Dell was definitely the people. I made many work friends, and managed to meet with some highly intelligent people. My favorite part of having worked there was probably the work conferences, just because it was nice seeing each other in person. However, I did have some gripes with my time at Dell. I think not seeing the impact of my work greatly affected my job satisfaction. I think that if I knew and saw the effects of my work on individuals I would have been a little more happier during my time there. Overall though, I had a pretty good experience at Dell. It was a great introduction to my career and taught me how to be a professional.",
+        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also all the unit tests for my team's codebase. My efforts brought code coverage from the low 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.",
     },
     {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "&emsp; My project for this 10 week internship was to create a Microsoft Teams chat bot. The idea for the chatbot was to query it for our internal API responses. It was meant as an alternative to the tools that we had like Swagger or Postman.<br/>&emsp;I won't lie, I was confused like 90% of the time because everything I was learning was so new to me. I mean I was being exposed to the corporate entity for the first time, it was my first time being a software engineer, and it was my first job working remote. I needed some time to adapt to everything. There were some hiccups along the way, but I tried my best and gave it my all.<br/>&emsp;Thankfully, I was not alone. I had a mentor throughout the entire experience that gave me pointers on how to win in a corporate level position. He gave me advice on how to become a better programmer and stepped in whenever I needed a question answered. The team around me also gave me some help and provided support as well.<br/>&emsp;At the end of the internship I gave a presentation to our organization on the project that I was assigned. The presenation went well and I received acknowledgements from the senior staff.<br/>&emsp;I think I could have done better in terms of problem solving? I felt that at the time of working as an intern, I lacked the confidence to suggest areas of improvement. I think that I lacked confidence to even see and identify potential areas of improvement. I feel that if I came up with my own solutions, I would have likely had an easier timeworking on what I was working on. I think that when you come up with something yourself, you have a better understanding of its context as opposed to being handed an assignment that you are just told to complete. However, I give myself grace because I was in a different state of mind back then, and understand why I found it hard to be a paid, creative problem solver for the first time. <br/>emsp;Overall the internship was a great introduction to my career, and although there was areas in which I think I could have handled the opportunity better, I am still thankful for its appearance in my life.",
+        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
     },
   ],
   projects: [
     {
-      name: "This Website (Portfolio)",
+      context: "For Myself",
+      name: "This Website",
       description:
-        "This project has been the most fun I have had building something. The idea was to make something that was unique amongst engineering portfolios. To standout. I did not want to make something that said, \"I work in the tech field.\" Even though I work in the technology sector, I wanted my portfolio to have some type of analog feel to it. I thought a good way of doing this was to portray my career and who I am through a more antiquated medium: the newspaper. There's a certain juxtaposition that happens when you place more advanced technology such as a website next to its more antiquated forms, in this case a newspaper. I'm also just a huge fan of older media. <br/>In terms of career development, I wanted to go back and ground myself on the fundamentals of web development. This project was made with HTML, CSS, and Javascript. The actual idea of the newspaper came from my love for older forms of media. I feel bad about saying that newspapers are outdated. I feel bad that times change always, forever and I guess this website was an artistic effort of holding onto those moments that will inevitably pass. Almost nobody reads newspapers anymore, and eventually that form of media will be obsolete. I thought it would be pretty ironic for someone who works with computer technology and information on such a granular level to display their work in such a historic way. I wanted to juxtapose all of these technological advancements against the backdrop of such a historic way of presenting information. Overall, the project took me about a month and a half to plan and create. <br/>I think that the most challenging aspect to a project like this was the design. I obviously stole the idea from the NY Times and copied their formatting, but found that their style guide did not lend itself well to the website format. My originality came in scrollable columns, something that is not possible on paper. This allows for paragraphs like the project and job description to be kept neatly and confined to the newspaper format even if they are long pieces of text. I think one area of improvement would be to give the website more pictures or interactibility. Maybe, include like a newspaper game like a crossword, word search, or sudoku. The idea is to make the website more fun in some way for the user, and not have them overwhelmed by the long pieces of text.",
+        'The idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
     },
     {
+      context: "SENIOR DESIGN",
       name: "OpenGrader",
       description:
-        "When my team had to think of an idea for our senior design project, first we spent some time looking for problems in our environment. As CS students, we noticed many of our peers struggling to receive their grades on time. In an effort to address this issue, my team and I came up with OpenGrader. OpenGrader sought to reduce grading time. Essentially what that means is make it easier for TAs or professors to grade the large amount of assignments they receive. We started to think about how we would acheive this. That is when we came up with ideas for features like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support. My biggest contribution to the project was syntax highlighting, a feature meant to ease code readibility. I also worked on unit testing for the frontend. What I found the most challenging was learning the tools, languages and frameworks. In this project, I was introduced to Docker, Next.js and Go for the first time. It was somewhat overwhelming to learn various things at the same time, especially while trying to build something, but I managed to contribute something useful to the project. Granted, I really enjoyed working on OpenGrader. It helped me solidfy all the engineering principles that are super important: requirement gathering, design, implementation, and feedback.",
+        "\tIt's pretty common for TAs and graders to take long on grading assignments. The sheer number of assignments they have to go through is only part of the problem. Reviewing code in within itself is pretty time consuming.\n\tOpenGrader sought to mitigate some of that struggle for graders.\n\tFeatures like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support aimed to make grading easier and quicker for TAs.\n\tMy biggest contribution to the project was syntax highlighting and front-end unit tests.",
     },
   ],
 };
 
+const aboutMeText =
+  "\tI have one year and seven months of professional experience building software. My strength is front-end development.\n\tMy career aspiration is to help companies share their vision with the rest of world.";
+
 let index = 0;
 let jobsIndex = 0;
 let projectsIndex = 0;
+
+const skillsImage = document.getElementById("skills-image");
+
+const jobs = document.getElementById("jobs");
 let employer = document.getElementById("employer");
 let title = document.getElementById("title");
 let jobDescription = document.getElementById("job-description");
 
+const projects = document.getElementById("projects");
 let project = document.getElementById("project");
 let projectDescription = document.getElementById("project-description");
+
+const aboutMePara = document.getElementById("about-me-para");
 
 const directionButtons = document.querySelectorAll(
   ".previous-button, .next-button"
@@ -43,6 +55,15 @@ const directionButtons = document.querySelectorAll(
 
 const toEmail = "julian.garcia.hernandez11@gmail.com";
 const sendEmailButton = document.getElementById("email-button");
+
+const authorHeading = document.createElement("h5");
+authorHeading.textContent = "By J.G HERNANDEZ";
+
+const horizontalLine = document.createElement("div");
+horizontalLine.className = "horizontal-line";
+
+const sectionLine = document.createElement("div");
+sectionLine.className = "section-horizontal-line";
 
 let senderName = "",
   from = "",
@@ -57,6 +78,8 @@ function loadInitial() {
   project.textContent = experience["projects"][projectsIndex].name;
   projectDescription.textContent =
     experience["projects"][projectsIndex].description;
+
+  aboutMePara.textContent = aboutMeText;
 }
 
 function createSubjectLine(inSenderName) {
@@ -144,4 +167,96 @@ directionButtons.forEach((button) => {
   }
 });
 
+function displayArticle(articleType) {
+  if (articleType == "jobs") {
+    const jobsArray = experience["jobs"];
+    const jobsSection = document.createElement("section");
+    const employerHeading = document.createElement("h3");
+    const titleHeading = document.createElement("h4");
+    const descriptionPara = document.createElement("p");
+
+    for (let i = 1; i < jobsArray.length; i++) {
+      employerHeading.textContent = jobsArray[i].employer;
+      titleHeading.textContent = jobsArray[i].title;
+      descriptionPara.textContent = jobsArray[i].description;
+
+      employerHeading.className = "employer";
+      titleHeading.className = "title";
+      descriptionPara.className = "job-description";
+
+      jobsSection.appendChild(sectionLine);
+      jobsSection.appendChild(employerHeading);
+      jobsSection.appendChild(horizontalLine.cloneNode()); //this might not work if you add more jobs experience
+      jobsSection.appendChild(titleHeading);
+      jobsSection.appendChild(horizontalLine.cloneNode());
+      jobsSection.appendChild(authorHeading);
+
+      if (titleHeading.textContent == "Engineering Intern") {
+        const jobFigure = document.createElement("figure");
+        const jobImage = document.createElement("img");
+        jobImage.setAttribute("src", "images/work-experience/internship.jpg");
+        const jobCaption = document.createElement("figcaption");
+        jobCaption.textContent =
+          "A photo of Austin I took during the internship.";
+
+        jobFigure.appendChild(jobImage);
+        jobFigure.appendChild(jobCaption);
+        jobsSection.appendChild(jobFigure);
+        jobsSection.appendChild(horizontalLine.cloneNode());
+      }
+
+      jobsSection.appendChild(descriptionPara);
+
+      jobs.appendChild(jobsSection);
+    }
+  } else if (articleType == "projects") {
+    const projectsArray = experience["projects"];
+
+    const projectsSection = document.createElement("section");
+    const projectContext = document.createElement("h3");
+    const projectHeading = document.createElement("h4");
+    const projectDescription = document.createElement("p");
+
+    for (let i = 1; i < projectsArray.length; i++) {
+      projectContext.textContent = projectsArray[i].context;
+      projectHeading.textContent = projectsArray[i].name;
+      projectDescription.textContent = projectsArray[i].description;
+
+      projectContext.className = "employer"; //FIX THIS, THE CLASSNAMES NEED TO BE MORE APPROPRIATELY NAMED
+      projectHeading.className = "title";
+      projectDescription.className = "job-description";
+
+      projectsSection.appendChild(sectionLine.cloneNode());
+      projectsSection.appendChild(projectContext);
+      projectsSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
+      projectsSection.appendChild(projectHeading);
+      projectsSection.appendChild(horizontalLine.cloneNode());
+      projectsSection.appendChild(authorHeading.cloneNode(true));
+
+      projectsSection.appendChild(projectDescription);
+
+      projects.appendChild(projectsSection);
+    }
+  }
+}
+
 loadInitial();
+
+if (window.innerWidth <= 440) {
+  displayArticle("jobs");
+  displayArticle("projects");
+
+  skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
+} else if (440 <= window.innerWidth <= 820) {
+  displayArticle("jobs");
+  displayArticle("projects");
+  skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
+}
+
+const pad = document.getElementById("pad");
+function ellipsePadding() {
+  pad.textContent = pad.textContent.padStart(14, " . ");
+}
+if (440 <= window.innerWidth <= 820) {
+  ellipsePadding();
+}
