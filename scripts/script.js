@@ -59,7 +59,7 @@ const sendEmailButton = document.getElementById("email-button");
 const authorHeading = document.createElement("h5");
 authorHeading.textContent = "By J.G HERNANDEZ";
 
-const horizontalLine = document.createElement("div");
+let horizontalLine = document.createElement("div");
 horizontalLine.className = "horizontal-line";
 
 const sectionLine = document.createElement("div");
@@ -184,7 +184,6 @@ function displayArticle(articleType) {
       titleHeading.className = "title";
       descriptionPara.className = "job-description";
 
-      jobsSection.appendChild(sectionLine);
       jobsSection.appendChild(employerHeading);
       jobsSection.appendChild(horizontalLine.cloneNode()); //this might not work if you add more jobs experience
       jobsSection.appendChild(titleHeading);
@@ -206,7 +205,7 @@ function displayArticle(articleType) {
       }
 
       jobsSection.appendChild(descriptionPara);
-
+      jobs.appendChild(sectionLine.cloneNode());
       jobs.appendChild(jobsSection);
     }
   } else if (articleType == "projects") {
