@@ -150,10 +150,6 @@ article:nth-of-type(2) {
   flex: 3;
 }
 
-article:nth-of-type(2) .horizontal-line {
-  margin: 0 19.5rem 0 19.5rem;
-}
-
 .vertical-line {
   border-left: 1px solid rgb(131, 131, 131);
   margin-top: 0.41rem;
@@ -385,12 +381,23 @@ figcaption {
   }
 
   .horizontal-line {
-    margin: 0.5rem 35% 0.5rem 35%;
+    margin: 0.5rem 42% 0.5rem 42%;
+    border-top: solid black 1px;
+  }
+
+  .vertical-line {
+    display: none;
+  }
+
+  .jobs-header,
+  .projects-header,
+  .contact-header {
+    text-align: center;
   }
 
   .website-metadata {
     margin: 0;
-    padding: 0rem 0rem 0rem 0rem;
+    padding: 0.25rem 0rem 0rem 0rem;
   }
 
   .website-metadata span:nth-child(2) {
@@ -398,14 +405,13 @@ figcaption {
   }
 
   .h2-horizontal-line {
-    margin: 0.5rem 37% 0.5rem 37%;
+    margin: 0.5rem 42% 0.5rem 42%;
   }
 
   main {
-    display: grid;
-    margin-top: 0.25rem;
-    grid-template-columns: repeat(18, 1fr);
-    grid-auto-rows: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem 0 0.25rem 0;
   }
 
   .jobs {
@@ -422,6 +428,14 @@ figcaption {
     aspect-ratio: 1;
     object-fit: cover;
     border: solid 1px rgb(47, 40, 40);
+  }
+
+  .dell-image {
+    object-position: -90px 0px;
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
   }
 
   .headshot-image {
@@ -451,6 +465,11 @@ figcaption {
     white-space-collapse: preserve;
   }
 
+  .article-horizontal-line {
+    border-top: 1px solid black;
+    margin: 1rem 0 1rem 0;
+  }
+
   .button-container {
     display: none;
   }
@@ -469,7 +488,7 @@ figcaption {
 
   .projects-header {
     padding: 0;
-    text-align: start;
+    text-align: center;
   }
 
   article:nth-of-type(3) section p {
@@ -484,12 +503,20 @@ figcaption {
   .professional-statement-header {
     font-size: 4.8vw;
     padding: 0;
+    text-align: center;
   }
 
   .contact-form {
-    grid-column-start: 1;
-    grid-column-end: 19;
+    display: flex;
+    flex-direction: column;
   }
+
+  form {
+    margin-left: 0;
+    width: 86%;
+    align-self: center;
+  }
+  
 
   .contact-header {
     margin: 0;
@@ -512,6 +539,7 @@ figcaption {
 
   .skills-header {
     margin-top: 0.266rem;
+    text-align: center;
   }
 }
 
@@ -670,6 +698,10 @@ figcaption {
     object-fit: cover;
     object-position: 20% 27%;
     border: solid 1px rgb(47, 40, 40);
+  }
+
+  figcaption {
+    margin-top: 0.6rem;
   }
 
   .working-img {
