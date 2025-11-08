@@ -107,9 +107,15 @@ textarea {
   border: solid 1px rgb(85, 85, 85);
 }
 
+input {
+  height: 2rem;
+}
+
 textarea {
+  font-size: .875rem;
   height: 100%;
   margin: 0;
+  padding-top: 0.431rem;
   white-space: pre-wrap;
 }
 
@@ -372,8 +378,21 @@ figcaption {
     margin: 0.5rem 1rem 0.5rem 1rem;
   }
 
+  input {
+    height: 2.75rem;
+  }
   header {
     justify-content: center;
+  }
+  section {
+    display: flex;
+    flex-direction: column;
+  }
+
+  figure {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
   }
 
   h1 {
@@ -407,7 +426,7 @@ figcaption {
 
   .website-metadata {
     margin: 0;
-    padding: 0.25rem 0rem 0rem 0rem;
+    padding: 0.25rem 0rem 0.25rem 0rem;
   }
 
   .website-metadata span:nth-child(2) {
@@ -444,10 +463,6 @@ figcaption {
     object-position: -90px 0px;
   }
 
-  figcaption {
-    margin-top: 0.6rem;
-  }
-
   .headshot-image {
     object-position: 20% -40%;
     background-color: #000000c7;
@@ -473,6 +488,8 @@ figcaption {
     line-height: calc(1.49 * 1em);
     hyphens: auto;
     white-space-collapse: preserve;
+    width: 88%;
+    align-self: center;
   }
 
   .article-horizontal-line {
@@ -486,9 +503,14 @@ figcaption {
 
   .skills {
     border: none;
-    margin: 0rem 0 0 0;
-    grid-column-start: 10;
-    grid-column-end: 19;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .skills-paragraphs {
+    width: 88%;
+    align-self: center;
   }
 
   .projects {
@@ -523,7 +545,7 @@ figcaption {
 
   form {
     margin-left: 0;
-    width: 84%;
+    width: 88%;
     align-self: center;
   }
 
@@ -722,6 +744,6 @@ figcaption {
   }
 
   textarea {
-    height: 3.5rem;
+    height: 5.5rem;
   }
 }
