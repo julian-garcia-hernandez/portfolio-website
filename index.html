@@ -48,12 +48,12 @@
           <h4 id="title">Software Engineer</h4>
           <div class="horizontal-line"></div>
           <h5>By J.G HERNANDEZ</h5>
-          <figure>
-            <img src="images/work-experience/dell.jpg" class="dell-image"/>
+          <figure class="jobs-figure">
+            <img src="images/work-experience/dell.jpg" class="dell-image" />
             <figcaption>The Dell headquarters in Round Rock, TX.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="job-description"></p>
+          <p id="job-description" class="job-description"></p>
           <div class="button-container">
             <button class="previous-button">Previous</button>
             <button class="next-button">Next</button>
@@ -85,7 +85,7 @@
           </p>
           <h5>Tools</h5>
           <p>
-            version Control (git/Github/Gihub), continuous integration (CI/CD),
+            version Control (git/Github/Gitlab), continuous integration (CI/CD),
             jira, confluence, trello, kanban, microsoft office, slack, visual
             studio, visual studio code, vim, VS Code, linux, macOS, windows,
             docker, AWS S3, AWS IAM identity center, node.js, vite, mySQL,
@@ -131,6 +131,7 @@
           </div>
         </section>
       </article>
+
       <div class="vertical-line"></div>
       <div class="article-horizontal-line"></div>
       <article class="professional-statement">
@@ -152,6 +153,7 @@
       </article>
       <div class="vertical-line"></div>
       <div class="article-horizontal-line"></div>
+
       <article class="contact-form">
         <h2 class="contact-header">
           CONTACT ME USING THE FOLLOWING FORM BELOW
@@ -164,7 +166,12 @@
         <h5>By J.G HERNANDEZ</h5>
         <!-- <section> -->
           <form>
-            <input id="sender-name" placeholder="Your name" name="name" required />
+            <input
+              id="sender-name"
+              placeholder="Your name"
+              name="name"
+              required
+            />
             <input
               id="from-email-address"
               type="email"

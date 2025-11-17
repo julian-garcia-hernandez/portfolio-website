@@ -4,13 +4,13 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also all the unit tests for my team's codebase. My efforts brought code coverage from the low 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.",
+        "\tI worked here a total of 1 year and 7 months. I improved Dell's support page website by adding accessibility feaatures to the company's self-support website. I also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.",
     },
     {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
+        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tThis tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
     },
   ],
   projects: [
@@ -30,7 +30,7 @@ const experience = {
 };
 
 const aboutMeText =
-  "\tI have one year and seven months of professional experience building software. My strength is front-end development.\n\tMy career aspiration is to help companies share their vision with the rest of world.";
+  "\tI am a software engineer with a focus on web development. My strengths include attention to detail, creativity and communication.\n\tI care a lot about the way things feel, and give it my all to make web experiences feel as pretty as possible. My goal is to leverage these strengths to help clients share their vision with the rest of world.";
 
 let index = 0;
 let jobsIndex = 0;
