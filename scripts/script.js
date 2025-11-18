@@ -225,7 +225,6 @@ function displayArticle(articleType) {
       projectHeading.className = "title";
       projectDescription.className = "job-description";
 
-      projectsSection.appendChild(sectionLine.cloneNode());
       projectsSection.appendChild(projectContext);
       projectsSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
       projectsSection.appendChild(projectHeading);
@@ -233,7 +232,8 @@ function displayArticle(articleType) {
       projectsSection.appendChild(authorHeading.cloneNode(true));
 
       projectsSection.appendChild(projectDescription);
-
+     
+      projects.appendChild(sectionLine.cloneNode());
       projects.appendChild(projectsSection);
     }
   }
@@ -244,9 +244,8 @@ loadInitial();
 if (window.innerWidth <= 440) {
   displayArticle("jobs");
   displayArticle("projects");
-
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
-} else if (440 <= window.innerWidth <= 820) {
+} else if (440 <= window.innerWidth && window.innerWidth <= 820) {
   displayArticle("jobs");
   displayArticle("projects");
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
@@ -256,6 +255,7 @@ const pad = document.getElementById("pad");
 function ellipsePadding() {
   pad.textContent = pad.textContent.padStart(14, " . ");
 }
-if (440 <= window.innerWidth <= 820) {
+
+if (440 <= window.innerWidth && window.innerWidth <= 820) {
   ellipsePadding();
 }
