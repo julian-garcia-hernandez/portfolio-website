@@ -35,7 +35,7 @@
         <a href="https://linkedin.com/in/juliangarciahernandez">LinkedIn</a>|
         <a href="https://github.com/julian-garcia-hernandez">Github</a>
       </span>
-      <span>$6.00</span>
+      <span class="money">$6.00</span>
     </div>
     <div class="h1-horizontal-line"></div>
     <main>
@@ -48,69 +48,82 @@
           <h4 id="title">Software Engineer</h4>
           <div class="horizontal-line"></div>
           <h5>By J.G HERNANDEZ</h5>
-          <figure>
-            <img src="images/work-experience/dell.jpg" />
+          <figure class="jobs-figure">
+            <img src="images/work-experience/dell.jpg" class="dell-image" />
             <figcaption>The Dell headquarters in Round Rock, TX.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="job-description"></p>
+          <p id="job-description" class="job-description"></p>
           <div class="button-container">
             <button class="previous-button">Previous</button>
             <button class="next-button">Next</button>
           </div>
         </section>
       </article>
-      <!-- <div class="vertical-line"></div> -->
+      <div class="vertical-line"></div>
       <div class="article-horizontal-line"></div>
       <article class="skills">
         <h2 class="skills-header">
           The Skills: Everything That I Know Or Have Worked With
         </h2>
-        <figure class="skills-figure"> 
-          <img
-            id="skills-image"
-            class="skills-image"
-            src="images/logos/composite-image-bw_2.png"
-          />
-          <figcaption>Technologies I work with.</figcaption>
-        </figure>
-        <div class="horizontal-line"></div>
-        <div class="skills">
-          <h5>Industry Knowledge</h5>
-          <p>
-            software development lifecycles (SDLC), scrum, agile methodologies,
-            full stack development, microservices, model-View-Controller
-            architecture, object oriented programming, data structures,
-            algorithms, project planning, unit testing.
-          </p>
-          <h5>Tools</h5>
-          <p>
-            version Control (git/Github/Gihub), continuous integration (CI/CD),
-            jira, confluence, trello, kanban, microsoft office, slack, visual
-            studio, visual studio code, vim, VS Code, linux, macOS, windows,
-            docker, AWS S3, AWS IAM identity center, node.js, vite, mySQL,
-            supabase, mongoDB, firebase.
-          </p>
-          <h5>Programming Languages & Frameworks</h5>
-          <p>
-            hTML/CSS/Javascript, C, C++, C#, Go, REACT.<span
-              class="decapitalize"
-              >js</span
-            >, ASP.NET Core MVC, SQL, kotlin, java
-          </p>
-          <h5>Soft Skills</h5>
-          <p>
-            informational literacy, time management, self-motivation,
-            creativity, communication, collaboration, interpersonal skills,
-            curious, resourcefulness, critical thinking, problem-solving,
-            conflict management
-          </p>
-        </div>
-      </article> 
+        <section>
+          <figure>
+            <img
+              id="skills-image"
+              class="skills-image"
+              src="images/logos/composite-image-bw_2.png"
+            />
+            <figcaption>Technologies I work with.</figcaption>
+          </figure>
 
-      <!-- <div class="vertical-line"></div> -->
-       <div class="article-horizontal-line"></div>
-       <article id="projects" class="projects"> 
+          <div class="horizontal-line"></div>
+          <div class="skills-paragraphs">
+            <div class="industry-knowledge">
+              <h5 class="skills-subheader">Industry Knowledge</h5>
+              <p>
+                software development lifecycles (SDLC), scrum, agile
+                methodologies, full stack development, microservices,
+                model-View-Controller architecture, object oriented programming,
+                data structures, algorithms, project planning, unit testing.
+              </p>
+            </div>
+            <div class="tools">
+              <h5 class="skills-subheader">Tools</h5>
+              <p>
+                version Control (git/Github/Gitlab), continuous integration
+                (CI/CD), jira, confluence, trello, kanban, microsoft office,
+                slack, visual studio, visual studio code, vim, VS Code, linux,
+                macOS, windows, docker, AWS S3, AWS IAM identity center,
+                node.js, vite, mySQL, supabase, mongoDB, firebase.
+              </p>
+            </div>
+            <div class="programming-languages">
+              <h5 class="skills-subheader">
+                Programming Languages & Frameworks
+              </h5>
+              <p>
+                hTML/CSS/Javascript, C, C++, C#, Go, REACT.<span
+                  class="decapitalize"
+                  >js</span
+                >, ASP.NET Core MVC, SQL, kotlin, java
+              </p>
+            </div>
+            <div class="soft-skills">
+              <h5 class="skills-subheader">Soft Skills</h5>
+              <p>
+                informational literacy, time management, self-motivation,
+                creativity, communication, collaboration, interpersonal skills,
+                curious, resourcefulness, critical thinking, problem-solving,
+                conflict management
+              </p>
+            </div>
+          </div>
+        </section>
+      </article>
+
+      <div class="vertical-line"></div>
+      <div class="article-horizontal-line"></div>
+      <article id="projects" class="projects">
         <h2 class="projects-header">PROJECTS I HAVE MADE AND FINISHED</h2>
         <div class="horizontal-line"></div>
         <section>
@@ -124,19 +137,19 @@
             <figcaption>Me working on this website.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="project-description" class="project-description">
-          </p>
+          <p id="project-description" class="project-description"></p>
           <div class="button-container">
             <button class="previous-button">Previous</button>
             <button class="next-button">Next</button>
           </div>
         </section>
       </article>
-      <!-- <div class="vertical-line"></div>  -->
+
+      <div class="vertical-line"></div>
       <div class="article-horizontal-line"></div>
       <article class="professional-statement">
         <h2 class="professional-statement-header">
-          Professional <br />Statement <br />About Myself
+          Professional Statement About Myself
         </h2>
         <div class="horizontal-line"></div>
         <section>
@@ -144,16 +157,16 @@
           <div class="horizontal-line"></div>
           <h5>By J.G HERNANDEZ</h5>
           <figure class="headshot-figure">
-            <img src="images/me/me.png" class="headshot-image"/>
+            <img src="images/me/me.png" class="headshot-image" />
             <figcaption>A photo of myself.</figcaption>
           </figure>
           <div class="horizontal-line"></div>
-          <p id="about-me-para">
-          </p>
+          <p id="about-me-para"></p>
         </section>
       </article>
-       <!-- <div class="vertical-line"></div>  -->
+      <div class="vertical-line"></div>
       <div class="article-horizontal-line"></div>
+
       <article class="contact-form">
         <h2 class="contact-header">
           CONTACT ME USING THE FOLLOWING FORM BELOW
@@ -164,26 +177,31 @@
         <h4>I Will Respond As Soon As Possible</h4>
         <div class="horizontal-line"></div>
         <h5>By J.G HERNANDEZ</h5>
-        <section>
-          <form>
-            <input id="sender-name" placeholder="Name" name="name" required />
-            <input
-              id="from-email-address"
-              type="email"
-              placeholder="Email"
-              name="email"
-              required
-            />
-            <textarea
-              id="email-text"
-              class="email"
-              placeholder="Write your email here..."
-              name="email"
-              required
-            ></textarea>
-            <button id="email-button" type="button">Send</button>
-          </form>
-        </section>
+        <!-- <section> -->
+        <form>
+          <input
+            id="sender-name"
+            placeholder="Your name"
+            name="name"
+            required
+          />
+          <input
+            id="from-email-address"
+            type="email"
+            placeholder="Your email address"
+            name="email"
+            required
+          />
+          <textarea
+            id="email-text"
+            class="email"
+            placeholder="Type your email here..."
+            name="email"
+            required
+          ></textarea>
+          <button id="email-button" type="button">Send</button>
+        </form>
+        <!-- </section> -->
       </article>
     </main>
   </body>

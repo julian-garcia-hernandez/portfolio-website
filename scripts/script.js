@@ -4,13 +4,13 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tI worked as an engineer for one year and seven months. During this time I added accessiblity feaatures to the company's self-support website. I also all the unit tests for my team's codebase. My efforts brought code coverage from the low 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.",
+        "\tDuring my time at Dell (1 year and 7 months), I worked on improving the usability of Dell's self-support page. One of my goals was to make the its web components display properly for different types of users. I was to account for differences in browser-type and screen size. The impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
     },
     {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.",
+        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tThis tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.\n\tThey ended up liking my work, and the value that I could bring to the company; so much so that they offered me a full-time offer to return the following year.",
     },
   ],
   projects: [
@@ -18,7 +18,7 @@ const experience = {
       context: "For Myself",
       name: "This Website",
       description:
-        'The idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
+        '\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
     },
     {
       context: "SENIOR DESIGN",
@@ -30,7 +30,7 @@ const experience = {
 };
 
 const aboutMeText =
-  "\tI have one year and seven months of professional experience building software. My strength is front-end development.\n\tMy career aspiration is to help companies share their vision with the rest of world.";
+  "\tI am a software engineer with a focus on web development. My strengths include attention to detail, creativity and communication.\n\tI care a lot about the way things feel, and give it my all to make web experiences feel as pretty as possible.\n\tMy goal is to leverage these strengths to help clients share their vision with the rest of world.";
 
 let index = 0;
 let jobsIndex = 0;
@@ -59,7 +59,7 @@ const sendEmailButton = document.getElementById("email-button");
 const authorHeading = document.createElement("h5");
 authorHeading.textContent = "By J.G HERNANDEZ";
 
-const horizontalLine = document.createElement("div");
+let horizontalLine = document.createElement("div");
 horizontalLine.className = "horizontal-line";
 
 const sectionLine = document.createElement("div");
@@ -184,7 +184,6 @@ function displayArticle(articleType) {
       titleHeading.className = "title";
       descriptionPara.className = "job-description";
 
-      jobsSection.appendChild(sectionLine);
       jobsSection.appendChild(employerHeading);
       jobsSection.appendChild(horizontalLine.cloneNode()); //this might not work if you add more jobs experience
       jobsSection.appendChild(titleHeading);
@@ -206,7 +205,7 @@ function displayArticle(articleType) {
       }
 
       jobsSection.appendChild(descriptionPara);
-
+      jobs.appendChild(sectionLine.cloneNode());
       jobs.appendChild(jobsSection);
     }
   } else if (articleType == "projects") {
@@ -226,7 +225,6 @@ function displayArticle(articleType) {
       projectHeading.className = "title";
       projectDescription.className = "job-description";
 
-      projectsSection.appendChild(sectionLine.cloneNode());
       projectsSection.appendChild(projectContext);
       projectsSection.appendChild(horizontalLine); //this might not work if you add more jobs experience
       projectsSection.appendChild(projectHeading);
@@ -235,6 +233,7 @@ function displayArticle(articleType) {
 
       projectsSection.appendChild(projectDescription);
 
+      projects.appendChild(sectionLine.cloneNode());
       projects.appendChild(projectsSection);
     }
   }
@@ -245,9 +244,8 @@ loadInitial();
 if (window.innerWidth <= 440) {
   displayArticle("jobs");
   displayArticle("projects");
-
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
-} else if (440 <= window.innerWidth <= 820) {
+} else if (440 <= window.innerWidth && window.innerWidth <= 820) {
   displayArticle("jobs");
   displayArticle("projects");
   skillsImage.setAttribute("src", "images/logos/square-composite-image-bw.png");
@@ -257,6 +255,7 @@ const pad = document.getElementById("pad");
 function ellipsePadding() {
   pad.textContent = pad.textContent.padStart(14, " . ");
 }
-if (440 <= window.innerWidth <= 820) {
+
+if (440 <= window.innerWidth && window.innerWidth <= 820) {
   ellipsePadding();
 }
