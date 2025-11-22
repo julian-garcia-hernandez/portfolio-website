@@ -49,6 +49,8 @@ let projectDescription = document.getElementById("project-description");
 
 const aboutMePara = document.getElementById("about-me-para");
 
+const dateElement = document.getElementById("date");
+
 const directionButtons = document.querySelectorAll(
   ".previous-button, .next-button"
 );
@@ -239,7 +241,23 @@ function displayArticle(articleType) {
   }
 }
 
+const options = {
+  weekday: "long",
+  year: "numeric",
+  month: "long",
+  day: "numeric",
+};
+
+function getDateString() {
+  return new Date().toLocaleDateString(undefined, options).toUpperCase();
+}
+
+function displayDate() {
+  dateElement.textContent = `EARTH, ${getDateString()}`;
+}
+
 loadInitial();
+displayDate();
 
 if (window.innerWidth <= 440) {
   displayArticle("jobs");
