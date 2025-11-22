@@ -840,6 +840,7 @@ figcaption {
     margin-left: 0;
     width: 93%;
     align-self: center;
+    max-width: 539px;
   }
 
   .contact-header {
