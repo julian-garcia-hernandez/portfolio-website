@@ -4,7 +4,7 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tDuring my time at Dell (1 year and 7 months), I worked on improving the usability of Dell's self-support page. One of my goals was to make the its web components display properly for different types of users. I was to account for differences in browser-type and screen size. The impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
+        "\tI worked at Dell for 1 year and 7 months. During that time, I improved the usability of Dell's self-support page.\n\tThis involved making its web components display properly for different user agents.\n\tThe impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it clearer for collaborators to understand the codebase.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
       imageSrc: "images/work-experience/dell.jpg",
       caption: "The Dell headquarters in Round Rock, TX.",
       class: "swe-img",
@@ -13,7 +13,7 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tThis tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.\n\tThey ended up liking my work, and the value that I could bring to the company; so much so that they offered me a full-time offer to return the following year.",
+        "\tDuring my internship at Dell, I built a Teams chatbot that would query our internal APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface. This tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders. I ended up getting a return offer to start full-time the following year.",
       imageSrc: "images/work-experience/internship.jpg",
       caption: "A photo of Austin I took during the internship.",
       class: "internship-img",
@@ -126,7 +126,6 @@ const jobsClassList = jobImage.classList;
 const projectsClassList = projectImage.classList;
 let removeIndex = 0;
 
-
 function previousEntry(items, itemType) {
   if (itemType == "jobs") {
     if (jobsIndex == 0) {
@@ -140,7 +139,7 @@ function previousEntry(items, itemType) {
     removeIndex = Math.abs((jobsIndex + 1) % items.length);
     jobImage.classList.toggle(items[removeIndex].class);
     jobImage.classList.toggle(items[jobsIndex].class);
-    jobImageCaption.setAttribute("src", items[jobsIndex].caption);
+    jobImageCaption.textContent = items[jobsIndex].caption;
 
     jobDescription.textContent = items[jobsIndex].description;
   } else if (itemType == "projects") {
@@ -156,7 +155,7 @@ function previousEntry(items, itemType) {
     removeIndex = Math.abs((projectsIndex + 1) % items.length);
     projectImage.classList.toggle(items[removeIndex].class);
     projectImage.classList.toggle(items[projectsIndex].class);
-    projectImageCaption.setAttribute("src", items[projectsIndex].caption);
+    projectImageCaption.textContent = items[projectsIndex].caption;
   }
 }
 
@@ -175,7 +174,7 @@ function nextEntry(items, itemType) {
     removeIndex = Math.abs((jobsIndex - 1) % items.length);
     jobImage.classList.toggle(items[removeIndex].class);
     jobImage.classList.toggle(items[jobsIndex].class);
-    jobImageCaption.setAttribute("src", items[jobsIndex].caption);
+    jobImageCaption.textContent = items[jobsIndex].caption;
     jobDescription.textContent = items[jobsIndex].description;
   } else if (itemType == "projects") {
     if (projectsIndex == items.length - 1) {
@@ -190,7 +189,7 @@ function nextEntry(items, itemType) {
     removeIndex = Math.abs((projectsIndex - 1) % items.length);
     projectImage.classList.toggle(items[removeIndex].class);
     projectImage.classList.toggle(items[projectsIndex].class);
-    projectImageCaption.setAttribute("src", items[projectsIndex].caption);
+    projectImageCaption.textContent = items[projectsIndex].caption;
 
     projectDescription.textContent = items[projectsIndex].description;
   }

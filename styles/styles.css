@@ -357,13 +357,17 @@ figcaption {
 .skills-paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .skills p {
   text-transform: capitalize;
   hyphens: auto;
   white-space: unset;
+}
+
+.decapitalize {
+  text-transform: lowercase;
 }
 
 /* .skills :nth-child(4) {
@@ -510,7 +514,7 @@ figcaption {
   }
 
   .portfolio-img {
-    object-position: -92px 0px;
+    object-position: -35px 0px;
   }
 
   .opengrader-img {
@@ -518,7 +522,7 @@ figcaption {
   }
 
   .job-description {
-    max-height: 249px;
+    max-height: 300px;
   }
   .project-description {
     max-height: 300px;
@@ -1027,10 +1031,6 @@ figcaption {
     word-spacing: 0px;
     overflow-wrap: break-word;
     word-wrap: break-word; */
-  }
-
-  .decapitalize {
-    text-transform: lowercase;
   }
 
   .skills h5 {
