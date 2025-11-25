@@ -253,6 +253,12 @@ figure img {
   width: 100%;
 }
 
+.job-image,
+.project-image,
+.headshot-image {
+  border: 1px solid black;
+}
+
 figcaption {
   text-align: center;
 }
@@ -476,8 +482,43 @@ figcaption {
     text-align: start;
   }
 
+  .job-image,
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 300px;
+  }
+
+  .project-image {
+    object-position: -92px 0px;
+  }
+
+  .headshot-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 340px;
+  }
+
+  .swe-img {
+    object-position: -40px 0px;
+  }
+
+  .internship-img {
+    object-position: -44px 0px;
+  }
+
+  .portfolio-img {
+    object-position: -92px 0px;
+  }
+
+  .opengrader-img {
+    object-position: -30px 0px;
+  }
+
   .job-description {
-    max-height: 300px;
+    max-height: 249px;
   }
   .project-description {
     max-height: 300px;
@@ -749,10 +790,6 @@ figcaption {
     aspect-ratio: 1;
     object-fit: cover;
     border: solid 1px rgb(47, 40, 40);
-  }
-
-  .dell-image {
-    object-position: -90px 0px;
   }
 
   .headshot-image {
