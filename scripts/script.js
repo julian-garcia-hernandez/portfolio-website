@@ -4,27 +4,39 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tDuring my time at Dell (1 year and 7 months), I worked on improving the usability of Dell's self-support page. One of my goals was to make the its web components display properly for different types of users. I was to account for differences in browser-type and screen size. The impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it easier to understand what the MVC components were doing.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
+        "\tI worked at Dell for 1 year and 7 months. During that time, I improved the usability of Dell's self-support page.\n\tThis involved making its web components display properly for different user agents.\n\tThe impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it clearer for collaborators to understand the codebase.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
+      imageSrc: "images/work-experience/dell.jpg",
+      caption: "The Dell headquarters in Round Rock, TX.",
+      class: "swe-img",
     },
     {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "\tI built a MS Teams chatbot to help my team be more efficient when validating APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface.\n\tThis tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders.\n\tThey ended up liking my work, and the value that I could bring to the company; so much so that they offered me a full-time offer to return the following year.",
+        "\tDuring my internship at Dell, I built a Teams chatbot that would query our internal APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface. This tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders. I ended up getting a return offer to start full-time the following year.",
+      imageSrc: "images/work-experience/internship.jpg",
+      caption: "A photo of Austin I took during the internship.",
+      class: "internship-img",
     },
   ],
   projects: [
     {
-      context: "For Myself",
+      context: "PORTFOLIO",
       name: "This Website",
       description:
         '\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
+      imageSrc: "images/projects/portfolio.jpg",
+      caption: "Working on the website.",
+      class: "portfolio-img",
     },
     {
       context: "SENIOR DESIGN",
       name: "OpenGrader",
       description:
         "\tIt's pretty common for TAs and graders to take long on grading assignments. The sheer number of assignments they have to go through is only part of the problem. Reviewing code in within itself is pretty time consuming.\n\tOpenGrader sought to mitigate some of that struggle for graders.\n\tFeatures like file test cases (a.k.a grading automation), inline commenting (student feedback), and multi-language support aimed to make grading easier and quicker for TAs.\n\tMy biggest contribution to the project was syntax highlighting and front-end unit tests.",
+      imageSrc: "images/projects/opengrader.jpg",
+      caption: "My team and I presenting OpenGrader.",
+      class: "opengrader-img",
     },
   ],
 };
@@ -42,9 +54,15 @@ const jobs = document.getElementById("jobs");
 let employer = document.getElementById("employer");
 let title = document.getElementById("title");
 let jobDescription = document.getElementById("job-description");
+let jobImage = document.getElementById("job-image");
+let jobImageCaption = document.getElementById("job-image-caption");
+
+let projectImage = document.getElementById("project-image");
+let projectImageCaption = document.getElementById("project-image-caption");
 
 const projects = document.getElementById("projects");
-let project = document.getElementById("project");
+let projectContext = document.getElementById("project-context");
+let projectName = document.getElementById("project-name");
 let projectDescription = document.getElementById("project-description");
 
 const aboutMePara = document.getElementById("about-me-para");
@@ -77,7 +95,7 @@ function loadInitial() {
   title.textContent = experience["jobs"][jobsIndex].title;
   jobDescription.textContent = experience["jobs"][jobsIndex].description;
 
-  project.textContent = experience["projects"][projectsIndex].name;
+  projectName.textContent = experience["projects"][projectsIndex].name;
   projectDescription.textContent =
     experience["projects"][projectsIndex].description;
 
@@ -104,8 +122,11 @@ function sendEmail() {
 
 sendEmailButton.addEventListener("click", sendEmail);
 
-//only gets triggered if the button is pressed
-function previousPara(items, itemType) {
+const jobsClassList = jobImage.classList;
+const projectsClassList = projectImage.classList;
+let removeIndex = 0;
+
+function previousEntry(items, itemType) {
   if (itemType == "jobs") {
     if (jobsIndex == 0) {
       jobsIndex = items.length - 1;
@@ -114,6 +135,12 @@ function previousPara(items, itemType) {
     }
     employer.textContent = items[jobsIndex].employer;
     title.textContent = items[jobsIndex].title;
+    jobImage.setAttribute("src", items[jobsIndex].imageSrc);
+    removeIndex = Math.abs((jobsIndex + 1) % items.length);
+    jobImage.classList.toggle(items[removeIndex].class);
+    jobImage.classList.toggle(items[jobsIndex].class);
+    jobImageCaption.textContent = items[jobsIndex].caption;
+
     jobDescription.textContent = items[jobsIndex].description;
   } else if (itemType == "projects") {
     if (projectsIndex == 0) {
@@ -121,21 +148,33 @@ function previousPara(items, itemType) {
     } else {
       projectsIndex--;
     }
-    project.textContent = items[projectsIndex].name;
+    projectContext.textContent = items[projectsIndex].context;
+    projectName.textContent = items[projectsIndex].name;
     projectDescription.textContent = items[projectsIndex].description;
+    projectImage.setAttribute("src", items[projectsIndex].imageSrc);
+    removeIndex = Math.abs((projectsIndex + 1) % items.length);
+    projectImage.classList.toggle(items[removeIndex].class);
+    projectImage.classList.toggle(items[projectsIndex].class);
+    projectImageCaption.textContent = items[projectsIndex].caption;
   }
 }
 
-//only gets triggered if the button is pressed
-function nextPara(items, itemType) {
+function nextEntry(items, itemType) {
   if (itemType == "jobs") {
     if (jobsIndex == items.length - 1) {
       jobsIndex = 0;
     } else {
       jobsIndex++;
     }
+
     employer.textContent = items[jobsIndex].employer;
     title.textContent = items[jobsIndex].title;
+
+    jobImage.setAttribute("src", items[jobsIndex].imageSrc);
+    removeIndex = Math.abs((jobsIndex - 1) % items.length);
+    jobImage.classList.toggle(items[removeIndex].class);
+    jobImage.classList.toggle(items[jobsIndex].class);
+    jobImageCaption.textContent = items[jobsIndex].caption;
     jobDescription.textContent = items[jobsIndex].description;
   } else if (itemType == "projects") {
     if (projectsIndex == items.length - 1) {
@@ -143,7 +182,15 @@ function nextPara(items, itemType) {
     } else {
       projectsIndex++;
     }
-    project.textContent = items[projectsIndex].name;
+    projectContext.textContent = items[projectsIndex].context;
+    projectName.textContext = items[projectsIndex].name;
+
+    projectImage.setAttribute("src", items[projectsIndex].imageSrc);
+    removeIndex = Math.abs((projectsIndex - 1) % items.length);
+    projectImage.classList.toggle(items[removeIndex].class);
+    projectImage.classList.toggle(items[projectsIndex].class);
+    projectImageCaption.textContent = items[projectsIndex].caption;
+
     projectDescription.textContent = items[projectsIndex].description;
   }
 }
@@ -156,7 +203,7 @@ directionButtons.forEach((button) => {
         event.currentTarget.parentElement.parentElement.parentElement.getAttribute(
           "id"
         );
-      previousPara(experience[articleType], articleType);
+      previousEntry(experience[articleType], articleType);
     });
   } else if (button.className == "next-button") {
     button.addEventListener("click", (event) => {
@@ -164,7 +211,7 @@ directionButtons.forEach((button) => {
         event.currentTarget.parentElement.parentElement.parentElement.getAttribute(
           "id"
         );
-      nextPara(experience[articleType], articleType);
+      nextEntry(experience[articleType], articleType);
     });
   }
 });
@@ -194,7 +241,7 @@ function displayArticle(articleType) {
 
       if (titleHeading.textContent == "Engineering Intern") {
         const jobFigure = document.createElement("figure");
-        const jobImage = document.createElement("img");
+        jobImage = document.createElement("img");
         jobImage.setAttribute("src", "images/work-experience/internship.jpg");
         const jobCaption = document.createElement("figcaption");
         jobCaption.textContent =
@@ -214,7 +261,7 @@ function displayArticle(articleType) {
     const projectsArray = experience["projects"];
 
     const projectsSection = document.createElement("section");
-    const projectContext = document.createElement("h3");
+    projectContext = document.createElement("h3");
     const projectHeading = document.createElement("h4");
     const projectDescription = document.createElement("p");
 

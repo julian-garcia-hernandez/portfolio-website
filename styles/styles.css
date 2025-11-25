@@ -253,6 +253,12 @@ figure img {
   width: 100%;
 }
 
+.job-image,
+.project-image,
+.headshot-image {
+  border: 1px solid black;
+}
+
 figcaption {
   text-align: center;
 }
@@ -351,13 +357,17 @@ figcaption {
 .skills-paragraphs {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .skills p {
   text-transform: capitalize;
   hyphens: auto;
   white-space: unset;
+}
+
+.decapitalize {
+  text-transform: lowercase;
 }
 
 /* .skills :nth-child(4) {
@@ -474,6 +484,41 @@ figcaption {
 
   section p {
     text-align: start;
+  }
+
+  .job-image,
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 300px;
+  }
+
+  .project-image {
+    object-position: -92px 0px;
+  }
+
+  .headshot-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 340px;
+  }
+
+  .swe-img {
+    object-position: -40px 0px;
+  }
+
+  .internship-img {
+    object-position: -44px 0px;
+  }
+
+  .portfolio-img {
+    object-position: -35px 0px;
+  }
+
+  .opengrader-img {
+    object-position: -30px 0px;
   }
 
   .job-description {
@@ -751,10 +796,6 @@ figcaption {
     border: solid 1px rgb(47, 40, 40);
   }
 
-  .dell-image {
-    object-position: -90px 0px;
-  }
-
   .headshot-image {
     object-position: 20% -40%;
     background-color: #000000c7;
@@ -990,10 +1031,6 @@ figcaption {
     word-spacing: 0px;
     overflow-wrap: break-word;
     word-wrap: break-word; */
-  }
-
-  .decapitalize {
-    text-transform: lowercase;
   }
 
   .skills h5 {
