@@ -280,6 +280,20 @@ function displayArticle(articleType) {
       projectsSection.appendChild(horizontalLine.cloneNode());
       projectsSection.appendChild(authorHeading.cloneNode(true));
 
+      if (projectHeading.textContent == "OpenGrader") {
+        const projectFigure = document.createElement("figure");
+        projectImage = document.createElement("img");
+        projectImage.setAttribute("src", "images/projects/opengrader.jpg");
+        const projectImageCaption = document.createElement("figcaption");
+        projectImageCaption.textContent =
+          "My team and I presenting OpenGrader.";
+        projectFigure.appendChild(projectImage);
+        projectFigure.appendChild(projectImageCaption);
+
+        projectsSection.appendChild(projectFigure);
+        projectsSection.appendChild(horizontalLine.cloneNode());
+      }
+
       projectsSection.appendChild(projectDescription);
 
       projects.appendChild(sectionLine.cloneNode());
