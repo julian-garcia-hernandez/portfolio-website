@@ -92,8 +92,6 @@ section {
 
 section p {
   margin: 0;
-  scrollbar-width: none;
-  overflow-y: scroll;
   white-space: preserve;
   hyphens: auto;
 }
@@ -370,10 +368,6 @@ figcaption {
   text-transform: lowercase;
 }
 
-/* .skills :nth-child(4) {
-  margin-bottom: 0rem;
-} */
-
 .professional-statement-header {
   font-family: "Cheltenham";
   font-size: 8.31vw;
@@ -385,7 +379,7 @@ figcaption {
 /* widescreens */
 @media screen and (min-width: 1260px) {
   body {
-    margin: 3rem 2rem 3rem 2rem;
+    margin: 0.75rem 2rem 3rem 2rem;
   }
 
   .website-metadata {
@@ -521,11 +515,34 @@ figcaption {
     object-position: -30px 0px;
   }
 
-  .job-description {
+  .para-container {
+    overflow-y: auto;
     max-height: 300px;
+    scrollbar-width: none;
+    background: linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
+      linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255) 70%) center
+        bottom,
+      radial-gradient(
+          farthest-side at 50% 0,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        center top,
+      radial-gradient(
+          farthest-side at 50% 100%,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        center bottom;
+
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 100% 40px, 100% 17px, 100% 17px;
+    background-position: 50% 0, 50% 100%, 50% 0, 50% 100;
+    background-attachment: local, local, scroll, scroll;
   }
-  .project-description {
-    max-height: 300px;
+
+  .para-container:last-of-type {
+    max-height: 325px;
   }
 
   form {
