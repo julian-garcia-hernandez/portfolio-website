@@ -4,7 +4,7 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Software Engineer",
       description:
-        "\tI worked at Dell for 1 year and 7 months. During that time, I improved the usability of Dell's self-support page.\n\tThis involved making its web components display properly for different user agents.\n\tThe impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. The unit tests made the code more maintainable for my team. I brought code coverage from 41% to 96%. This greatly improved code maintainability and made it clearer for collaborators to understand the codebase.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.",
+        "\tI worked at Dell for 1 year and 7 months. During that time, I improved the usability of Dell's self-support page.\n\tThis involved making its web components display properly for different user agents.\n\tThe impact of my work there affected many people worldwide as this website was visited by 220k+ people on a monthly basis.\n\tI also created over 100+ unit tests for my team's codebase. I brought the code coverage rating from 41% to 96%. This greatly improved code maintainability and made it clearer for collaborators to understand the codebase.\n\tApart from my experience as an engineer, I was also a member of the ITDP (IT Development Program. In the ITDP I attended numerous business developmental workshops and networking events.\n\tThe program also gave me mentorship opportunites which I took advantage of learning from professionals of 15+ years.\n\tOverall, Dell was a great introduction to my career as software engineer, I got experience shipping software, collaborating remotely, and networking with industry professionals.",
       imageSrc: "images/work-experience/dell.jpg",
       caption: "The Dell headquarters in Round Rock, TX.",
       class: "swe-img",
@@ -13,9 +13,9 @@ const experience = {
       employer: "DELL TECHNOLOGIES",
       title: "Engineering Intern",
       description:
-        "\tDuring my internship at Dell, I built a Teams chatbot that would query our internal APIs. It was an alternative to tools like Swagger or Postman, except with a chat interface. This tool helped my team be more productive when it came to testing our internal APIs.\n\tAt the end of the internship, I gave a proof of concept presentation to all of my team's business leaders. I ended up getting a return offer to start full-time the following year.",
+        "\tDuring my internship at Dell, I worked under Identity Access Management (IAM). My project was to build a Microsoft Teams chatbot that would help my team diagnose and troubleshoot issues with our products' APIs.\n\tFeatures the chatbot had that other tools (Swagger/Postman) did not were real time API status updates, relevant documentation on how to use the API, and integration with a MS Teams environment.\n\tThese features reduced time spent fixing API related bugs by 30%.\n\tAt the end of the internship, I presented the project to Dell's IAM stakeholders. I talked about what I learned, some challenges I faced, and what I would do differently had I started over.\n\tThe presentation went well, I ended up getting a return offer to start full-time 2023.",
       imageSrc: "images/work-experience/internship.jpg",
-      caption: "A photo of Austin I took during the internship.",
+      caption: "Austin skyline during my internship.",
       class: "internship-img",
     },
   ],
@@ -42,7 +42,7 @@ const experience = {
 };
 
 const aboutMeText =
-  "\tI am a software engineer with a focus on web development. My strengths include attention to detail, creativity and communication.\n\tI care a lot about the way things feel, and give it my all to make web experiences feel as pretty as possible.\n\tMy goal is to leverage these strengths to help clients share their vision with the rest of world.";
+  "\tI am a software engineer with a focus on web development. I have one year and seven months of experience working for Dell Technologies.\n\tMy strengths include attention to detail, creativity and communication. I care a lot about the way things feel, and give it my all to make web experiences feel as pretty as possible.\n\tMy current short-term goal is to build one more project with HTML/CSS/JS before I move onto a web framework. I want to acheive this goal during Q1 2026.\n\tMy long-term goal is to build a free, open-source MIDI education service using Vue.js, this is something that I want to have done by the end of Q4 2026.\n\tI want future employers to see these projects as displays of service, creativity, and design. I want to work with people that value those three as much as I do.";
 
 let index = 0;
 let jobsIndex = 0;
@@ -279,6 +279,20 @@ function displayArticle(articleType) {
       projectsSection.appendChild(projectHeading);
       projectsSection.appendChild(horizontalLine.cloneNode());
       projectsSection.appendChild(authorHeading.cloneNode(true));
+
+      if (projectHeading.textContent == "OpenGrader") {
+        const projectFigure = document.createElement("figure");
+        projectImage = document.createElement("img");
+        projectImage.setAttribute("src", "images/projects/opengrader.jpg");
+        const projectImageCaption = document.createElement("figcaption");
+        projectImageCaption.textContent =
+          "My team and I presenting OpenGrader.";
+        projectFigure.appendChild(projectImage);
+        projectFigure.appendChild(projectImageCaption);
+
+        projectsSection.appendChild(projectFigure);
+        projectsSection.appendChild(horizontalLine.cloneNode());
+      }
 
       projectsSection.appendChild(projectDescription);
 
