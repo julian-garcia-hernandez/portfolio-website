@@ -24,7 +24,7 @@ const experience = {
       context: "PORTFOLIO",
       name: "This Website",
       description:
-        '\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
+        '\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tYou could see the code for the website here.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
       imageSrc: "images/projects/portfolio.jpg",
       caption: "Working on the website.",
       class: "portfolio-img",
@@ -183,7 +183,7 @@ function nextEntry(items, itemType) {
       projectsIndex++;
     }
     projectContext.textContent = items[projectsIndex].context;
-    projectName.textContext = items[projectsIndex].name;
+    projectName.textContent = items[projectsIndex].name;
 
     projectImage.setAttribute("src", items[projectsIndex].imageSrc);
     removeIndex = Math.abs((projectsIndex - 1) % items.length);
@@ -243,6 +243,7 @@ function displayArticle(articleType) {
         const jobFigure = document.createElement("figure");
         jobImage = document.createElement("img");
         jobImage.setAttribute("src", "images/work-experience/internship.jpg");
+        jobImage.className = jobsArray[i].class;
         const jobCaption = document.createElement("figcaption");
         jobCaption.textContent =
           "A photo of Austin I took during the internship.";
@@ -284,6 +285,7 @@ function displayArticle(articleType) {
         const projectFigure = document.createElement("figure");
         projectImage = document.createElement("img");
         projectImage.setAttribute("src", "images/projects/opengrader.jpg");
+        projectImage.className = projectsArray[i].class;
         const projectImageCaption = document.createElement("figcaption");
         projectImageCaption.textContent =
           "My team and I presenting OpenGrader.";
@@ -301,6 +303,8 @@ function displayArticle(articleType) {
     }
   }
 }
+
+function appendsClasses() {}
 
 const options = {
   weekday: "long",
@@ -320,6 +324,7 @@ function displayDate() {
 loadInitial();
 displayDate();
 
+//controls the different images
 if (window.innerWidth <= 440) {
   displayArticle("jobs");
   displayArticle("projects");
