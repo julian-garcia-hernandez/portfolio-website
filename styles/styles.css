@@ -412,6 +412,22 @@ figcaption {
     margin-top: 0.43rem;
   }
 
+  .jobs section .para-container, .projects section .para-container {
+    max-height: 436px;
+  }
+
+  .skills section {
+    height: min-content;
+  }
+
+  .skills {
+    vertical-align: middle;
+  }
+
+  .email {
+    max-height: 662px;
+  }
+
   .para-container {
     max-height: 266px;
     overflow-y: scroll;
@@ -434,9 +450,10 @@ figcaption {
 
     background-repeat: no-repeat;
     background-size: 100% 40px, 100% 40px, 100% 17px, 100% 17px;
-    background-position: 50% 0, 50% 100%, 50% 0, 50% 100;
+    background-position: 50% 0, 50% 100%, 50% 0, 50% 100%;
     background-attachment: local, local, scroll, scroll;
   }
+
 
   .job-image,
   .project-image {
