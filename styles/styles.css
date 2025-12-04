@@ -420,10 +420,6 @@ figcaption {
     vertical-align: middle;
   }
 
-  .email {
-    max-height: 662px;
-  }
-
   .para-container {
     max-height: 266px;
     overflow-y: scroll;
