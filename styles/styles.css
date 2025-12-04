@@ -64,7 +64,6 @@ body {
 
 main {
   display: flex;
-  margin-top: 1.5rem;
 }
 
 form {
@@ -110,7 +109,6 @@ textarea {
   border-radius: 0;
   font-family: "Newsreader";
   padding-left: 0.25rem;
-  /* box-shadow: 1px 1px 1px rgb(137, 137, 137); */
   border: solid 1px rgb(85, 85, 85);
 }
 
@@ -147,17 +145,19 @@ button {
   height: 2rem;
   color: black;
   background-color: rgb(230, 230, 230);
-  /* box-shadow: 1px 1px 1px rgb(117, 117, 117); */
   padding: 1px 2px 1px 2px;
+  min-height: 2rem;
 }
 
-article:nth-of-type(1), /*jobs*/
-article:nth-of-type(3), /*skills*/
-article:nth-of-type(4), /*professional statement*/
+article:nth-of-type(1),
+article:nth-of-type(3),
+article:nth-of-type(4),
 article:nth-of-type(5) {
-  /*mail form*/
-  /**/
   flex: 1;
+}
+
+.skills {
+  border: none;
 }
 
 article:nth-of-type(2) {
@@ -243,6 +243,7 @@ figure {
   flex-direction: column;
   align-items: center;
   gap: 0.75rem;
+  width: 100%;
 }
 
 figure img {
@@ -255,6 +256,10 @@ figure img {
 .project-image,
 .headshot-image {
   border: 1px solid black;
+}
+
+.headshot-image {
+  background-color: #000000c7;
 }
 
 figcaption {
@@ -289,7 +294,6 @@ figcaption {
   border-bottom: 1px solid black;
   padding-top: 0.5rem;
   padding-bottom: 0.25rem;
-  margin-top: 0.75rem;
   justify-content: space-between;
 }
 
@@ -345,13 +349,6 @@ figcaption {
   margin-top: 1rem;
 }
 
-.skills {
-  border: 1px black solid;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  margin-top: 1.5rem;
-}
-
 .skills-paragraphs {
   display: flex;
   flex-direction: column;
@@ -376,8 +373,126 @@ figcaption {
   text-align: justify;
 }
 
-/* widescreens */
-@media screen and (min-width: 1260px) {
+@media screen and (min-width: 2000px) {
+  body {
+    margin: 2rem 4rem 2rem 4rem;
+  }
+  h1 {
+    font-size: 5.2vw;
+  }
+
+  .h1-horizontal-line {
+    display: none;
+  }
+
+  .horizontal-line,
+  .h2-horizontal-line {
+    width: 35%;
+  }
+
+  .horizontal-line {
+    max-width: 106.16px;
+  }
+
+  .vertical-line {
+    margin: 0.43rem 0.5rem 0 0.5rem;
+  }
+
+  .website-metadata {
+    margin: 0.3rem 0 0 0;
+  }
+
+  .professional-statement-header {
+    font-size: 2.4rem;
+    text-align: start;
+    margin-top: 0.43rem;
+  }
+
+  .jobs section .para-container, .projects section .para-container {
+    max-height: 436px;
+  }
+
+  .skills section {
+    height: min-content;
+  }
+
+  .skills {
+    vertical-align: middle;
+  }
+
+  .email {
+    max-height: 662px;
+  }
+
+  .para-container {
+    max-height: 266px;
+    overflow-y: scroll;
+    scrollbar-width: none;
+    background: linear-gradient(white 30%, rgba(255, 255, 255, 0)) center top,
+      linear-gradient(rgba(255, 255, 255, 0), rgb(255, 255, 255) 70%) center
+        bottom,
+      radial-gradient(
+          farthest-side at 50% 0,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        center top,
+      radial-gradient(
+          farthest-side at 50% 100%,
+          rgba(0, 0, 0, 0.2),
+          rgba(0, 0, 0, 0)
+        )
+        center bottom;
+
+    background-repeat: no-repeat;
+    background-size: 100% 40px, 100% 40px, 100% 17px, 100% 17px;
+    background-position: 50% 0, 50% 100%, 50% 0, 50% 100%;
+    background-attachment: local, local, scroll, scroll;
+  }
+
+
+  .job-image,
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 300px;
+  }
+
+  .swe-img {
+    object-position: -40px 0px;
+  }
+
+  .internship-img {
+    object-position: -23px 0px;
+  }
+
+  .portfolio-img {
+    object-position: -63px 0px;
+  }
+
+  .opengrader-img {
+    object-position: -35px 0px;
+  }
+
+  .headshot-image {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
+    min-height: 340px;
+    object-position: 40% -36%;
+  }
+
+  .para-container:last-of-type {
+    max-height: unset;
+  }
+  form {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (1260px < width <= 2000px) {
   body {
     margin: 0.75rem 2rem 3rem 2rem;
   }
@@ -416,7 +531,6 @@ figcaption {
 
   main {
     margin-top: 0.25rem;
-    /* gap: .25rem; */
   }
 
   .jobs,
@@ -497,6 +611,7 @@ figcaption {
     object-fit: cover;
     aspect-ratio: 1;
     min-height: 340px;
+    object-position: 40% -289%;
   }
 
   .swe-img {
@@ -551,7 +666,6 @@ figcaption {
   }
 }
 
-/* desktops */
 @media screen and (860px < width <= 1260px) {
   body {
     margin: 1rem 1rem 1rem 1rem;
@@ -694,7 +808,6 @@ figcaption {
   }
 
   .contact-header {
-    /* width: 75%; */
     text-align: start;
     max-width: 564px;
   }
@@ -722,8 +835,7 @@ figcaption {
   }
 }
 
-/* tablets */
-@media screen and (440px < width <= 860px) {
+@media screen and (500px < width <= 860px) {
   body {
     margin: 0.5rem 1rem 0.5rem 1rem;
   }
@@ -756,7 +868,6 @@ figcaption {
   }
 
   h1 {
-    /* flex: 10; */
     font-size: 9vw;
     line-height: calc(1.49 * 1em);
   }
@@ -784,6 +895,12 @@ figcaption {
   .website-metadata {
     margin: 0;
     padding: 0.25rem 0rem 0.25rem 0rem;
+    justify-content: space-evenly;
+  }
+
+  .volume,
+  .money {
+    display: none;
   }
 
   .website-metadata span:nth-child(2) {
@@ -810,7 +927,16 @@ figcaption {
     max-width: 455px;
     aspect-ratio: 1;
     object-fit: cover;
+    object-position: 4% 27%;
     border: solid 1px rgb(47, 40, 40);
+  }
+
+  .internship-img {
+    object-position: -27px 0px;
+  }
+
+  .opengrader-img {
+    object-position: -50px 0px;
   }
 
   .headshot-image {
@@ -818,12 +944,8 @@ figcaption {
     background-color: #000000c7;
   }
 
-  .working-figure {
-    display: none;
-  }
-
   .working-img {
-    object-position: 50% 27%;
+    object-position: 40% 27%;
   }
 
   article:nth-of-type(1) section p {
@@ -876,6 +998,13 @@ figcaption {
     height: unset;
   }
 
+  .para-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   .professional-statement {
     grid-column-start: 10;
     grid-column-end: 19;
@@ -896,9 +1025,9 @@ figcaption {
 
   form {
     margin-left: 0;
-    width: 93%;
+    width: 84%;
     align-self: center;
-    max-width: 539px;
+    max-width: 548px;
   }
 
   .contact-header {
@@ -928,8 +1057,7 @@ figcaption {
   }
 }
 
-/* mobile */
-@media screen and (width <= 440px) {
+@media screen and (width <= 500px) {
   body {
     display: block;
     margin: 0.5rem 1.25rem 0.5rem 1.25rem;
@@ -948,8 +1076,6 @@ figcaption {
   }
   .website-metadata {
     display: none;
-    /* margin-top: .25rem; FIXME: maybe all of this could go inside a burger menu?*/
-    /* justify-content: center; */
   }
 
   main {
@@ -1043,11 +1169,6 @@ figcaption {
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     text-transform: capitalize;
-    /* white-space: collapse;
-    word-break: normal;
-    word-spacing: 0px;
-    overflow-wrap: break-word;
-    word-wrap: break-word; */
   }
 
   .skills h5 {
@@ -1079,12 +1200,24 @@ figcaption {
     width: 90%;
     aspect-ratio: 1;
     object-fit: cover;
-    object-position: 20% 27%;
+    object-position: 20% -22%;
     border: solid 1px rgb(47, 40, 40);
   }
 
+  .swe-img {
+    object-position: 18% 27%;
+  }
+
+  .internship-img {
+    object-position: 17% 27%;
+  }
+
+  .opengrader-img {
+    object-position: 34% 27%;
+  }
+
   .working-img {
-    object-position: 50% 27%;
+    object-position: 40% 27%;
   }
 
   form {
