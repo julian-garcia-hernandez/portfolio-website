@@ -194,6 +194,10 @@ h1 {
   text-align: center;
 }
 
+.icon-external-links, .website-metadata .horizontal-line {
+  display: none;
+}
+
 h2 {
   margin: 0;
 }
@@ -301,7 +305,7 @@ figcaption {
   justify-content: space-between;
 }
 
-.website-metadata span:nth-child(2) {
+.author-credit {
   font-size: 0.75rem;
   margin-top: 0.25rem;
   font-weight: lighter;
@@ -412,7 +416,8 @@ figcaption {
     margin-top: 0.43rem;
   }
 
-  .jobs section .para-container, .projects section .para-container {
+  .jobs section .para-container,
+  .projects section .para-container {
     max-height: 436px;
   }
 
@@ -449,7 +454,6 @@ figcaption {
     background-position: 50% 0, 50% 100%, 50% 0, 50% 100%;
     background-attachment: local, local, scroll, scroll;
   }
-
 
   .job-image,
   .project-image {
@@ -1074,8 +1078,60 @@ figcaption {
     font-size: 8.5vw;
     line-height: 2rem;
   }
+
   .website-metadata {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    padding: .5rem 0 0 0;
+    border-bottom: 0;
+  }
+
+  .website-metadata .horizontal-line {
+    display: unset;
+  }
+
+  .website-metadata .horizontal-line:nth-of-type(1) {
+    width: 42%;
+    order: 2;
+  }
+
+  .website-metadata .horizontal-line:nth-of-type(2) {
+    width: 100%;
+    order: 4;
+  }
+
+
+  .icon-external-links {
+    order: 1;
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  a {
+    display: contents;
+  }
+
+  .author-credit {
+    order: 3;
+    margin-top: 0;
+    font-size: .8rem;
+  }
+
+  .volume,
+  time,
+  .text-external-links,
+  .money {
     display: none;
+  }
+
+  time {
+    align-content: center;
+  }
+
+  .icon {
+    max-width: 2rem;
+    max-height: 2rem;
   }
 
   main {
@@ -1084,7 +1140,7 @@ figcaption {
   }
 
   .h1-horizontal-line {
-    display: block;
+    display: none;
     margin: 0.25rem 0 0.25rem 0;
   }
 

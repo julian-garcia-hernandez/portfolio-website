@@ -86,7 +86,6 @@ const sectionLine = document.createElement("div");
 sectionLine.className = "section-horizontal-line";
 
 let senderName = "",
-  from = "",
   subject = "",
   body = "";
 
@@ -111,7 +110,6 @@ function createSubjectLine(inSenderName) {
 
 function sendEmail() {
   senderName = document.getElementById("sender-name").value;
-  fromEmail = document.getElementById("from-email-address").value;
   subject = createSubjectLine(senderName);
   body = document.getElementById("email-text").value;
   body = encodeURIComponent(body);
