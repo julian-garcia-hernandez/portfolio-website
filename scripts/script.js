@@ -24,7 +24,7 @@ const experience = {
       context: "PORTFOLIO",
       name: "This Website",
       description:
-        '\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, "I work in the tech field."\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tYou could see the code for the website here.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.',
+        "\tThe idea was to make something unique amongst engineering portfolios. To standout. I was trying to avoid something that said, \"I work in the tech field.\"\n\tI also wanted the portfolio to feel retro and antiquated. That\'s why I based the styling around that of newspapers.\n\tThis project was created using HTML, CSS, and Javascript. I wanted to refine my web development fundamentals and this was an easy enough project to do that.\n\tThe most challenging aspect was responsive design. It was already hard enough adapting the styling from a paper medium to a screen medium, and it was even more difficult for different kinds of screens. Still, I had fun mixing the old (newspapers) and the new (websites). The scrollable newspaper column was my probably my favorite UI element that I created.\n\tYou could see the code for the website <a href='https://github.com/julian-garcia-hernandez/portfolio-website'>here<\/a>.\n\tThe only thing I would do differently would be giving the website more interactibility. Perhaps including a newspaper game (e.g, a crossword, word search, or sudoku puzzle) would make the website more engaging for the user.",
       imageSrc: "images/projects/portfolio.jpg",
       caption: "Working on the website.",
       class: "portfolio-img",
@@ -96,7 +96,7 @@ function loadInitial() {
   jobDescription.textContent = experience["jobs"][jobsIndex].description;
 
   projectName.textContent = experience["projects"][projectsIndex].name;
-  projectDescription.textContent =
+  projectDescription.innerHTML =
     experience["projects"][projectsIndex].description;
 
   aboutMePara.textContent = aboutMeText;
@@ -104,7 +104,7 @@ function loadInitial() {
 
 function createSubjectLine(inSenderName) {
   if (inSenderName != "") {
-    return `${inSenderName} — BUSINESS INQUIRY`;
+    return `${inSenderName} — Contact Form`;
   }
   return subject;
 }
@@ -150,7 +150,7 @@ function previousEntry(items, itemType) {
     }
     projectContext.textContent = items[projectsIndex].context;
     projectName.textContent = items[projectsIndex].name;
-    projectDescription.textContent = items[projectsIndex].description;
+    projectDescription.innerHTML = items[projectsIndex].description;
     projectImage.setAttribute("src", items[projectsIndex].imageSrc);
     removeIndex = Math.abs((projectsIndex + 1) % items.length);
     projectImage.classList.toggle(items[removeIndex].class);
@@ -191,7 +191,7 @@ function nextEntry(items, itemType) {
     projectImage.classList.toggle(items[projectsIndex].class);
     projectImageCaption.textContent = items[projectsIndex].caption;
 
-    projectDescription.textContent = items[projectsIndex].description;
+    projectDescription.innerHTML = items[projectsIndex].description;
   }
 }
 
@@ -269,7 +269,7 @@ function displayArticle(articleType) {
     for (let i = 1; i < projectsArray.length; i++) {
       projectContext.textContent = projectsArray[i].context;
       projectHeading.textContent = projectsArray[i].name;
-      projectDescription.textContent = projectsArray[i].description;
+      projectDescription.innerHTML = projectsArray[i].description;
 
       projectContext.className = "employer"; //FIX THIS, THE CLASSNAMES NEED TO BE MORE APPROPRIATELY NAMED
       projectHeading.className = "title";
